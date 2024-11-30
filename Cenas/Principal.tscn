@@ -57,27 +57,47 @@ theme_override_constants/h_separation = 60
 theme_override_constants/v_separation = 100
 columns = 3
 
-[node name="orgao" type="Button" parent="celular/telaCelular"]
+[node name="defesaCivil" type="Button" parent="celular/telaCelular"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 53
 text = "hoi"
 
-[node name="orgao2" type="Button" parent="celular/telaCelular"]
+[node name="policiaMilitar" type="Button" parent="celular/telaCelular"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 53
 text = "hoi"
 
-[node name="orgao3" type="Button" parent="celular/telaCelular"]
+[node name="ambulancia" type="Button" parent="celular/telaCelular"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 53
 text = "hoi"
 
-[node name="orgao4" type="Button" parent="celular/telaCelular"]
+[node name="rioAguas" type="Button" parent="celular/telaCelular"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 53
 text = "hoi"
 
-[node name="orgao5" type="Button" parent="celular/telaCelular"]
+[node name="light" type="Button" parent="celular/telaCelular"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 53
+text = "hoi"
+
+[node name="orgao6" type="Button" parent="celular/telaCelular"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 53
+text = "hoi"
+
+[node name="orgao7" type="Button" parent="celular/telaCelular"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 53
+text = "hoi"
+
+[node name="orgao8" type="Button" parent="celular/telaCelular"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 53
+text = "hoi"
+
+[node name="orgao9" type="Button" parent="celular/telaCelular"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 53
 text = "hoi"

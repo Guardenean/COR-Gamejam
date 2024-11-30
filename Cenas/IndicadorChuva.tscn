@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://d1p1y5klpaarj"]
+[gd_scene load_steps=2 format=3 uid="uid://d1p1y5klpaarj"]
+
+[ext_resource type="Script" path="res://Scripts/indicador_chuva.gd" id="1_iwuhe"]
 
 [node name="IndicadorChuva" type="Control"]
 layout_mode = 3
@@ -6,6 +8,7 @@ anchor_right = 0.488
 anchor_bottom = 0.248
 offset_right = 0.895874
 offset_bottom = 0.159973
+script = ExtResource("1_iwuhe")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 layout_mode = 1
