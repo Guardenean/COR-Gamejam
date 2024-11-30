@@ -17,7 +17,7 @@ func _process(delta: float):
 	if time_elapsed >= update_interval:
 		# Gera e atualiza o valor da barra
 		progress_bar.value = _equilibrador()
-		_mede_chuva(progress_bar.value)
+		_mede_Congestionamento(progress_bar.value)
 		time_elapsed = 0.0
 
 func _equilibrador() -> float:
@@ -27,14 +27,14 @@ func _equilibrador() -> float:
 	else:  # 30% de chance de estar entre 50% e 100%
 		return randf_range(max_value / 2, max_value)
 
-func _mede_chuva(value: float):
+func _mede_Congestionamento(value: float):
 	if value >= 90:
-		print("O MUNDO VAI CAAAAIIR! Estimativa: 150mm")
+		print("Congestionamento Total, Caos total")
 	elif value >= 70:
-		print("chuvinha foite! Estimativa: 100mm")
+		print("Grande Congestionamento")
 	elif value >= 50:
-		print("Chuva mediana! Estimativa: 50mm")
+		print("Congestionamento Moderado")
 	elif value >= 30:
-		print("Chuva goitosa! Estimativa: 20mm")
+		print("Congestionamento Leve")
 	else:
-		print("sem chuva ;-;. Estimativa: 0mm")
+		print("Sem Congestionamento")

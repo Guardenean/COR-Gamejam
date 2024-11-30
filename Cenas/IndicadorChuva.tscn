@@ -2,22 +2,10 @@
 
 [ext_resource type="Script" path="res://Scripts/indicador_chuva.gd" id="1_iwuhe"]
 
-[node name="IndicadorChuva" type="Control"]
-layout_mode = 3
-anchor_right = 0.488
-anchor_bottom = 0.248
-offset_right = 0.895874
-offset_bottom = 0.159973
-script = ExtResource("1_iwuhe")
-
-[node name="ProgressBar" type="ProgressBar" parent="."]
-layout_mode = 1
+[node name="ProgressBar" type="ProgressBar"]
 anchors_preset = -1
-anchor_left = 0.256
-anchor_top = 0.269
-anchor_right = 0.694
-anchor_bottom = 0.459
-offset_left = -4.056
-offset_top = -0.0920029
-offset_right = -0.143982
-offset_bottom = -0.0120087
+anchor_right = 0.216
+anchor_bottom = 0.047
+offset_right = -1.12799
+offset_bottom = 0.239998
+script = ExtResource("1_iwuhe")
