@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jjsrlbf6poiv"
-path="res://.godot/imported/Tela Principal.jpg-8b336f40bbf1042bce409f85c8816f22.ctex"
+uid="uid://p77uko42grrj"
+path="res://.godot/imported/IconMedidores.png-64fe25c5382bb1f95760824f3b699073.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tela Principal.jpg"
-dest_files=["res://.godot/imported/Tela Principal.jpg-8b336f40bbf1042bce409f85c8816f22.ctex"]
+source_file="res://Assets/SpritesPrincipais/IconMedidores.png"
+dest_files=["res://.godot/imported/IconMedidores.png-64fe25c5382bb1f95760824f3b699073.ctex"]
 
 [params]
 

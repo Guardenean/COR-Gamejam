@@ -97,5 +97,5 @@ const desastres = {
 	
 func seleciona_desastre():
 	var d = randi_range(0, desastres.size() - 1)
-	var _result = desastres[d]
-	return desastres
+	var result = desastres[d]
+	return result

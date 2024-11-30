@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv4wb5ronen2w"]
+
+[ext_resource type="Script" path="res://Scripts/ocorrenciasTriste.gd" id="1_86021"]
+[ext_resource type="Texture2D" uid="uid://q56a3pr5rlpp" path="res://Assets/SpritesPrincipais/Telao.png" id="2_u7cyh"]
+
+[sub_resource type="Theme" id="Theme_vi3dj"]
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 437
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 25
+
+[node name="OcorrenciasTeste" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 854.0
+offset_top = 3.0
+offset_right = -1054.0
+offset_bottom = -252.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_u7cyh")
+expand_mode = 1
+script = ExtResource("1_86021")
+
+[node name="containerOcorrencias" type="VBoxContainer" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.052
+anchor_top = 0.0562121
+anchor_right = 0.926
+anchor_bottom = 0.949364
+offset_left = 2.00001
+offset_top = -3.37498
+offset_right = 1.99997
+offset_bottom = -3.22504
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_vi3dj")
+theme_override_constants/separation = 20
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
