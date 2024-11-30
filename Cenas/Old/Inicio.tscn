@@ -55,16 +55,10 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Jogar"
 
-[node name="Tutorial" type="Button" parent="Fundo/Botoes"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 34
-text = "Tutorial"
-
 [node name="Sair" type="Button" parent="Fundo/Botoes"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 34
 text = "Sair"
 
 [connection signal="pressed" from="Fundo/Botoes/Jogar" to="." method="_on_jogar_pressed"]
-[connection signal="pressed" from="Fundo/Botoes/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="Fundo/Botoes/Sair" to="." method="_on_sair_pressed"]

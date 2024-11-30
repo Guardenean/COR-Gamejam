@@ -1,0 +1,424 @@
+[gd_scene load_steps=13 format=3 uid="uid://wb3vqsdryar2"]
+
+[ext_resource type="Script" path="res://Scripts/Tutorial.gd" id="1_acpc8"]
+[ext_resource type="Texture2D" uid="uid://bwen7vpkv34dp" path="res://Assets/SpritesPrincipais/Icones/AlertaRio.png" id="2_djchx"]
+[ext_resource type="Texture2D" uid="uid://dyn06v801ya4c" path="res://Assets/SpritesPrincipais/Icones/Bombeiro.png" id="3_bwujg"]
+[ext_resource type="Texture2D" uid="uid://csyrnddrgehvx" path="res://Assets/SpritesPrincipais/Icones/CetRio.png" id="4_h3rwe"]
+[ext_resource type="Texture2D" uid="uid://cgb1lpj6ybrl2" path="res://Assets/SpritesPrincipais/Icones/Comlurb.png" id="5_iewjd"]
+[ext_resource type="Texture2D" uid="uid://mq0225hhh7hw" path="res://Assets/SpritesPrincipais/Icones/Conservacao.png" id="6_gpx4d"]
+[ext_resource type="Texture2D" uid="uid://d0wqbdwvgeg2l" path="res://Assets/SpritesPrincipais/Icones/DefesaCivil.png" id="7_bfxel"]
+[ext_resource type="Texture2D" uid="uid://cnh4g075uy4h8" path="res://Assets/SpritesPrincipais/Icones/GeoRio.png" id="8_6qbxu"]
+[ext_resource type="Texture2D" uid="uid://dij3me27ja51a" path="res://Assets/SpritesPrincipais/Icones/PoliciaMilitar.png" id="9_iapco"]
+[ext_resource type="Texture2D" uid="uid://cc62vfc4nfno5" path="res://Assets/SpritesPrincipais/Icones/RioAguas.png" id="10_2lsvj"]
+[ext_resource type="Texture2D" uid="uid://db8qqkpg3wdhl" path="res://Assets/SpritesPrincipais/Icones/RioLuz.png" id="11_sc1kj"]
+[ext_resource type="Texture2D" uid="uid://bycer6w1hu7la" path="res://Assets/SpritesPrincipais/Icones/SAMU.png" id="12_3reds"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_acpc8")
+
+[node name="Aprentação Jogo" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="prox1" type="Button" parent="Aprentação Jogo"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.517
+anchor_top = 0.848
+anchor_right = 0.517
+anchor_bottom = 0.848
+offset_left = -274.936
+offset_top = -34.84
+offset_right = 276.064
+offset_bottom = 35.16
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "PRÓXIMO"
+
+[node name="Titulo" type="Label" parent="Aprentação Jogo"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.499
+anchor_top = 0.137
+anchor_right = 0.499
+anchor_bottom = 0.137
+offset_left = -439.592
+offset_top = -47.96
+offset_right = 437.408
+offset_bottom = 48.04
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "COMO FUNCIONA O JOGO"
+
+[node name="Descrição" type="Label" parent="Aprentação Jogo"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.526
+anchor_top = 0.5
+anchor_right = 0.526
+anchor_bottom = 0.5
+offset_left = -675.608
+offset_top = -306.0
+offset_right = 676.392
+offset_bottom = 316.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Você terá que gerenciar as equipes dos ogãos em questão para evitar/
+amenizar as ocorrencias de crise. "
+
+[node name="Button" type="Button" parent="Aprentação Jogo"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.085
+anchor_right = 0.05
+anchor_bottom = 0.085
+offset_left = -44.4
+offset_top = -38.8
+offset_right = 42.6
+offset_bottom = 39.2
+theme_override_font_sizes/font_size = 24
+text = "X"
+
+[node name="Orgãos Jogo" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Orgãos Jogo"]
+layout_mode = 0
+offset_left = 1879.0
+offset_top = 534.0
+offset_right = 1919.0
+offset_bottom = 574.0
+
+[node name="AlertaRio" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer"]
+position = Vector2(-1647, -324)
+texture = ExtResource("2_djchx")
+
+[node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer/AlertaRio"]
+anchors_preset = -1
+anchor_left = 2.575
+anchor_top = 0.596
+anchor_right = 2.575
+anchor_bottom = 0.596
+offset_left = -226.0
+offset_top = -95.52
+offset_right = 106.0
+offset_bottom = -24.52
+theme_override_font_sizes/font_size = 24
+text = "Alerta Rio
+Objetivo Alertar a população"
+
+[node name="CetRio" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer"]
+position = Vector2(-1647, -159)
+texture = ExtResource("4_h3rwe")
+
+[node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer/CetRio"]
+anchors_preset = -1
+anchor_left = 3.15
+anchor_top = 0.696
+anchor_right = 3.15
+anchor_bottom = 0.696
+offset_left = -295.0
+offset_top = -95.52
+offset_right = -74.0
+offset_bottom = -24.52
+theme_override_font_sizes/font_size = 24
+text = "Cet Rio
+Objetivo ameinizar o meio de trasnporte"
+
+[node name="Bombeiros" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer"]
+position = Vector2(-1647, 1)
+texture = ExtResource("3_bwujg")
+
+[node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer/Bombeiros"]
+anchors_preset = -1
+anchor_left = 3.212
+anchor_top = 0.562
+anchor_right = 3.212
+anchor_bottom = 0.562
+offset_left = -302.44
+offset_top = -95.44
+offset_right = 182.56
+offset_bottom = -24.44
+theme_override_font_sizes/font_size = 24
+text = "Bombeiros
+Combater Incêndios e resgate de pessoas "
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Orgãos Jogo"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Comlurb" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer2"]
+position = Vector2(1103, 242)
+texture = ExtResource("5_iewjd")
+
+[node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer2/Comlurb"]
+anchors_preset = -1
+anchor_left = 2.421
+anchor_top = 0.5
+anchor_right = 2.421
+anchor_bottom = 0.5
+offset_left = -210.52
+offset_top = -91.0
+offset_right = 90.48
+offset_bottom = -20.0
+theme_override_font_sizes/font_size = 24
+text = "Comlurb
+Remover Destritos e Lixos"
+metadata/_edit_use_anchors_ = true
+
+[node name="Conservacao" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer2"]
+position = Vector2(1103, 390)
+texture = ExtResource("6_gpx4d")
+
+[node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer2/Conservacao"]
+anchors_preset = -1
+anchor_left = 2.829
+anchor_top = 0.5
+anchor_right = 2.829
+anchor_bottom = 0.5
+offset_left = -257.48
+offset_top = -97.0
+offset_right = 137.52
+offset_bottom = -26.0
+theme_override_font_sizes/font_size = 24
+text = "Conservacao
+Drenagem dos Ralos e Tubulações"
+metadata/_edit_use_anchors_ = true
+
+[node name="DefesaCivil" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer2"]
+position = Vector2(1103, 552)
+texture = ExtResource("7_bfxel")
+
+[node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer2/DefesaCivil"]
+anchors_preset = -1
+anchor_left = 2.237
+anchor_top = 0.367
+anchor_right = 2.237
+anchor_bottom = 0.367
+offset_left = -180.44
+offset_top = -77.04
+offset_right = 60.56
+offset_bottom = -43.04
+theme_override_font_sizes/font_size = 24
+text = "Defesa Civil"
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Orgãos Jogo"]
+layout_mode = 0
+offset_left = 1881.0
+offset_top = 222.0
+offset_right = 1921.0
+offset_bottom = 262.0
+
+[node name="PoliciaMilitar" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer3"]
+position = Vector2(4, 38)
+texture = ExtResource("9_iapco")
+
+[node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer3/PoliciaMilitar"]
+anchors_preset = -1
+anchor_left = 2.608
+anchor_top = 0.308
+anchor_right = 2.608
+anchor_bottom = 0.308
+offset_left = -226.96
+offset_top = -76.96
+offset_right = 107.04
+offset_bottom = -42.96
+theme_override_font_sizes/font_size = 24
+text = "Polícia Civil"
+metadata/_edit_use_anchors_ = true
+
+[node name="RioLuz" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer3"]
+position = Vector2(4, 178)
+texture = ExtResource("11_sc1kj")
+
+[node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer3/RioLuz"]
+anchors_preset = -1
+anchor_left = 2.558
+anchor_top = 0.375
+anchor_right = 2.558
+anchor_bottom = 0.375
+offset_left = -226.96
+offset_top = -77.0
+offset_right = 107.04
+offset_bottom = -43.0
+theme_override_font_sizes/font_size = 24
+text = "Rio Luz"
+metadata/_edit_use_anchors_ = true
+
+[node name="SAMU" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer3"]
+position = Vector2(4, 326)
+texture = ExtResource("12_3reds")
+
+[node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer3/SAMU"]
+anchors_preset = -1
+anchor_left = 2.733
+anchor_top = 0.358
+anchor_right = 2.733
+anchor_bottom = 0.358
+offset_left = -226.96
+offset_top = -76.96
+offset_right = 107.04
+offset_bottom = -42.96
+theme_override_font_sizes/font_size = 24
+text = "Samu"
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Orgãos Jogo"]
+layout_mode = 0
+offset_left = 1961.0
+offset_top = 510.0
+offset_right = 2001.0
+offset_bottom = 550.0
+
+[node name="GeoRio" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer4"]
+position = Vector2(-1332, 173)
+texture = ExtResource("8_6qbxu")
+
+[node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer4/GeoRio"]
+anchors_preset = -1
+anchor_left = 2.467
+anchor_top = 0.5
+anchor_right = 2.467
+anchor_bottom = 0.5
+offset_left = -197.04
+offset_top = -77.0
+offset_right = 76.96
+offset_bottom = -43.0
+theme_override_font_sizes/font_size = 24
+text = "Geo Rio"
+metadata/_edit_use_anchors_ = true
+
+[node name="RioAguas" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer4"]
+position = Vector2(-398, 173)
+texture = ExtResource("10_2lsvj")
+
+[node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer4/RioAguas"]
+anchors_preset = -1
+anchor_left = 2.475
+anchor_top = 0.467
+anchor_right = 2.475
+anchor_bottom = 0.467
+offset_left = -197.0
+offset_top = -77.04
+offset_right = 77.0
+offset_bottom = -43.04
+theme_override_font_sizes/font_size = 24
+text = "Rio Águas"
+metadata/_edit_use_anchors_ = true
+
+[node name="ant1" type="Button" parent="Orgãos Jogo"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.326
+anchor_top = 0.849
+anchor_right = 0.326
+anchor_bottom = 0.849
+offset_left = -275.008
+offset_top = -36.92
+offset_right = 275.992
+offset_bottom = 36.08
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "ANTERIOR"
+
+[node name="prox2" type="Button" parent="Orgãos Jogo"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.707
+anchor_top = 0.85
+anchor_right = 0.707
+anchor_bottom = 0.85
+offset_left = -274.456
+offset_top = -35.0
+offset_right = 276.544
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "PRÓXIMO"
+
+[node name="Label" type="Label" parent="Orgãos Jogo"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.227
+anchor_top = 0.026
+anchor_right = 0.767
+anchor_bottom = 0.115
+offset_left = 0.383972
+offset_top = -0.0799999
+offset_right = 1.06396
+offset_bottom = -0.200005
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "OS ORGÃOS QUE VOCÊ IRÁ GERENCIAR"
+
+[node name="Mecânica Jogo" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ant2" type="Button" parent="Mecânica Jogo"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.516
+anchor_top = 0.849
+anchor_right = 0.516
+anchor_bottom = 0.849
+offset_left = -273.528
+offset_top = -36.92
+offset_right = 274.472
+offset_bottom = 36.08
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "ANTERIOR"
+
+[node name="Label" type="Label" parent="Mecânica Jogo"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51
+anchor_top = 0.099
+anchor_right = 0.51
+anchor_bottom = 0.099
+offset_left = -294.08
+offset_top = -47.92
+offset_right = 293.92
+offset_bottom = 48.08
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "Mecânica do Jogo"
+
+[connection signal="pressed" from="Aprentação Jogo/prox1" to="." method="_on_prox_1_pressed"]
+[connection signal="pressed" from="Aprentação Jogo/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Orgãos Jogo/ant1" to="." method="_on_ant_1_pressed"]
+[connection signal="pressed" from="Orgãos Jogo/prox2" to="." method="_on_prox_2_pressed"]
+[connection signal="pressed" from="Mecânica Jogo/ant2" to="." method="_on_ant_2_pressed"]

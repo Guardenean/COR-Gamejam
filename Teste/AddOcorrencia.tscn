@@ -1,0 +1,221 @@
+[gd_scene load_steps=3 format=3 uid="uid://nipky3x5de0"]
+
+[ext_resource type="Script" path="res://Teste/add_ocorrencia.gd" id="1_wmt2p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mg86o"]
+font_size = 50
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wmt2p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Add" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -497.0
+offset_top = -18.0
+offset_right = -411.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "ADICIONA
+"
+
+[node name="Descricao" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "asdasdsadsadasd"
+
+[node name="Telas" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" type="Panel" parent="Telas"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -244.0
+offset_top = -176.0
+offset_right = 244.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Telas/1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.5
+offset_top = -65.0
+offset_right = 180.5
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "PIPIPI POPOPO"
+label_settings = SubResource("LabelSettings_mg86o")
+
+[node name="Prox1" type="Button" parent="Telas/1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = 86.0
+offset_right = 74.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "PRÓXIMO"
+
+[node name="2" type="Panel" parent="Telas"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 418.0
+offset_top = -176.0
+offset_right = 906.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Telas/2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.5
+offset_top = -65.0
+offset_right = 180.5
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "AMOGUS SUS"
+label_settings = SubResource("LabelSettings_mg86o")
+
+[node name="Ant2" type="Button" parent="Telas/2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.0
+offset_top = 86.0
+offset_right = -29.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "ANTERIOR"
+
+[node name="Prox2" type="Button" parent="Telas/2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 34.0
+offset_top = 86.0
+offset_right = 182.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "PRÓXIMO"
+
+[node name="3" type="Panel" parent="Telas"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 418.0
+offset_top = -176.0
+offset_right = 906.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Telas/3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.5
+offset_top = -65.0
+offset_right = 180.5
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MEU OVO
+ESQUERDO"
+label_settings = SubResource("LabelSettings_mg86o")
+
+[node name="Ant3" type="Button" parent="Telas/3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = 86.0
+offset_right = 74.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "ANTERIOR"
+
+[connection signal="pressed" from="Add" to="." method="_on_add_pressed"]
+[connection signal="pressed" from="Telas/1/Prox1" to="." method="_on_prox_1_pressed"]
+[connection signal="pressed" from="Telas/2/Ant2" to="." method="_on_ant_2_pressed"]
+[connection signal="pressed" from="Telas/2/Prox2" to="." method="_on_prox_2_pressed"]
+[connection signal="pressed" from="Telas/3/Ant3" to="." method="_on_ant_3_pressed"]

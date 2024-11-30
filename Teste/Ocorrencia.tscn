@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp4vfyplko8r6"]
+
+[ext_resource type="Script" path="res://Teste/ocorrencia.gd" id="1_dxvd0"]
+
+[node name="Ocorrencia" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "PLACEHOLDER"
+script = ExtResource("1_dxvd0")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

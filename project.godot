@@ -27,6 +27,15 @@ window/size/window_width_override=1204
 window/size/window_height_override=540
 window/stretch/mode="canvas_items"
 
+[file_customization]
+
+folder_colors={
+"res://Assets/": "purple",
+"res://Cenas/Old/": "red",
+"res://Scripts/": "green",
+"res://Teste/": "red"
+}
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
