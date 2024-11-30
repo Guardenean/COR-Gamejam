@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://dk4k6n5ggmbwm"]
 
-[ext_resource type="Script" path="res://Scripts/Congestionamento.gd" id="1_mji6b"]
+[ext_resource type="Script" path="res://Scripts/Logica/Congestionamento.gd" id="1_mji6b"]
+
 
 [node name="ProgressBar" type="ProgressBar"]
 anchors_preset = -1

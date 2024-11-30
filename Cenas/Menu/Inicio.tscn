@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://clqqpt8pulpiy"]
 
-[ext_resource type="Script" path="res://Scripts/inicio.gd" id="1_7wj8r"]
+[ext_resource type="Script" path="res://Scripts/Menu/inicio.gd" id="1_b1bkd"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-script = ExtResource("1_7wj8r")
+script = ExtResource("1_b1bkd")
 
 [node name="Fundo" type="Panel" parent="."]
 layout_mode = 1

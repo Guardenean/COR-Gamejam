@@ -1,13 +1,13 @@
 extends Node
 
-const ocor = preload("res://Cenas/BtnOcorrencias.tscn")
+const ocor = preload("res://Cenas/Objetos/BtnOcorrencias.tscn")
 @onready var box = $VBoxContainer
 @onready var timer = $Timer
 
-var min_ocor = 1
-var max_ocor = 5
-var intervalo_min = 0.0#20.0
-var intervalo_max = 2.0#40.0
+#@export var min_ocor = 1
+@export var max_ocor = 4
+@export var intervalo_min = 0.0#20.0
+@export var intervalo_max = 2.0#40.0
 
 func _ready() -> void:
 	timer.wait_time = randf_range(intervalo_min, intervalo_max)

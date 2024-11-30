@@ -1,31 +1,38 @@
-[gd_scene load_steps=23 format=3 uid="uid://bo1lqd22ai3kg"]
+[gd_scene load_steps=26 format=3 uid="uid://bo1lqd22ai3kg"]
 
-[ext_resource type="Texture2D" uid="uid://dmxywrp1usmrg" path="res://Assets/SpritesPrincipais/Background.jpg" id="1_n0ukn"]
-[ext_resource type="Texture2D" uid="uid://q56a3pr5rlpp" path="res://Assets/SpritesPrincipais/Telao.png" id="2_jm5jg"]
-[ext_resource type="Texture2D" uid="uid://d0wqbdwvgeg2l" path="res://Assets/SpritesPrincipais/Icones/DefesaCivil.png" id="3_64l05"]
-[ext_resource type="Texture2D" uid="uid://dqwmnpbjbpek5" path="res://Assets/SpritesPrincipais/Mesa.png" id="3_hkoks"]
-[ext_resource type="Texture2D" uid="uid://bluc56pxhhii1" path="res://Assets/SpritesPrincipais/Indicadores.png" id="4_eca31"]
-[ext_resource type="Texture2D" uid="uid://cgb1lpj6ybrl2" path="res://Assets/SpritesPrincipais/Icones/Comlurb.png" id="4_u3qbp"]
-[ext_resource type="Texture2D" uid="uid://bycer6w1hu7la" path="res://Assets/SpritesPrincipais/Icones/SAMU.png" id="5_3wiv5"]
-[ext_resource type="Texture2D" uid="uid://p77uko42grrj" path="res://Assets/SpritesPrincipais/IconMedidores.png" id="5_ci5uk"]
-[ext_resource type="Texture2D" uid="uid://dyn06v801ya4c" path="res://Assets/SpritesPrincipais/Icones/Bombeiro.png" id="6_ftixi"]
-[ext_resource type="Texture2D" uid="uid://dij3me27ja51a" path="res://Assets/SpritesPrincipais/Icones/PoliciaMilitar.png" id="7_dqi4h"]
-[ext_resource type="PackedScene" uid="uid://d1p1y5klpaarj" path="res://Cenas/IndicadorChuva.tscn" id="7_gbxmd"]
-[ext_resource type="PackedScene" uid="uid://cymge8mq3ouik" path="res://Cenas/IndicadorCalor.tscn" id="7_huv8n"]
-[ext_resource type="Texture2D" uid="uid://bwen7vpkv34dp" path="res://Assets/SpritesPrincipais/Icones/AlertaRio.png" id="8_sakd4"]
-[ext_resource type="Texture2D" uid="uid://cnh4g075uy4h8" path="res://Assets/SpritesPrincipais/Icones/GeoRio.png" id="9_x1ynt"]
-[ext_resource type="Texture2D" uid="uid://db8qqkpg3wdhl" path="res://Assets/SpritesPrincipais/Icones/RioLuz.png" id="10_7klfb"]
-[ext_resource type="Texture2D" uid="uid://cc62vfc4nfno5" path="res://Assets/SpritesPrincipais/Icones/RioAguas.png" id="11_jbtxq"]
-[ext_resource type="Texture2D" uid="uid://csyrnddrgehvx" path="res://Assets/SpritesPrincipais/Icones/CetRio.png" id="12_qffpv"]
-[ext_resource type="Texture2D" uid="uid://mq0225hhh7hw" path="res://Assets/SpritesPrincipais/Icones/Conservacao.png" id="13_sjxqn"]
-[ext_resource type="Texture2D" uid="uid://xj8qpxbbkpcy" path="res://Assets/icon.svg" id="15_e17ro"]
-[ext_resource type="Script" path="res://Scripts/OcorrenciasFeliz.gd" id="16_phkmk"]
+[ext_resource type="Texture2D" uid="uid://dmxywrp1usmrg" path="res://Assets/SpritesPrincipais/Background.jpg" id="1_f22hs"]
+[ext_resource type="Script" path="res://Scripts/Logica/GameController.gd" id="1_tamjx"]
+[ext_resource type="Texture2D" uid="uid://q56a3pr5rlpp" path="res://Assets/SpritesPrincipais/Telao.png" id="2_o8201"]
+[ext_resource type="Texture2D" uid="uid://d0wqbdwvgeg2l" path="res://Assets/SpritesPrincipais/Icones/DefesaCivil.png" id="3_2ibad"]
+[ext_resource type="Texture2D" uid="uid://cgb1lpj6ybrl2" path="res://Assets/SpritesPrincipais/Icones/Comlurb.png" id="4_b0cec"]
+[ext_resource type="Texture2D" uid="uid://bycer6w1hu7la" path="res://Assets/SpritesPrincipais/Icones/SAMU.png" id="5_d1a3r"]
+[ext_resource type="Texture2D" uid="uid://dyn06v801ya4c" path="res://Assets/SpritesPrincipais/Icones/Bombeiro.png" id="6_ga0v1"]
+[ext_resource type="Texture2D" uid="uid://dij3me27ja51a" path="res://Assets/SpritesPrincipais/Icones/PoliciaMilitar.png" id="7_hmc2f"]
+[ext_resource type="Texture2D" uid="uid://bwen7vpkv34dp" path="res://Assets/SpritesPrincipais/Icones/AlertaRio.png" id="8_55fxb"]
+[ext_resource type="Texture2D" uid="uid://cnh4g075uy4h8" path="res://Assets/SpritesPrincipais/Icones/GeoRio.png" id="9_u2fx4"]
+[ext_resource type="Texture2D" uid="uid://db8qqkpg3wdhl" path="res://Assets/SpritesPrincipais/Icones/RioLuz.png" id="10_rnwhg"]
+[ext_resource type="Texture2D" uid="uid://cc62vfc4nfno5" path="res://Assets/SpritesPrincipais/Icones/RioAguas.png" id="11_63on3"]
+[ext_resource type="Texture2D" uid="uid://csyrnddrgehvx" path="res://Assets/SpritesPrincipais/Icones/CetRio.png" id="12_4nook"]
+[ext_resource type="Texture2D" uid="uid://mq0225hhh7hw" path="res://Assets/SpritesPrincipais/Icones/Conservacao.png" id="13_8m6ct"]
+[ext_resource type="Texture2D" uid="uid://dqwmnpbjbpek5" path="res://Assets/SpritesPrincipais/Mesa.png" id="14_s6u07"]
+[ext_resource type="Texture2D" uid="uid://xj8qpxbbkpcy" path="res://Assets/icon.svg" id="15_cyy2x"]
+[ext_resource type="Script" path="res://Scripts/Logica/OcorrenciasFeliz.gd" id="16_qdsup"]
+[ext_resource type="Texture2D" uid="uid://bluc56pxhhii1" path="res://Assets/SpritesPrincipais/Indicadores.png" id="17_a0ssq"]
+[ext_resource type="Texture2D" uid="uid://p77uko42grrj" path="res://Assets/SpritesPrincipais/IconMedidores.png" id="18_7e1eo"]
+[ext_resource type="PackedScene" uid="uid://cymge8mq3ouik" path="res://Cenas/Objetos/IndicadorCalor.tscn" id="19_u85c2"]
+[ext_resource type="PackedScene" uid="uid://d1p1y5klpaarj" path="res://Cenas/Objetos/IndicadorChuva.tscn" id="20_0ipy2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fhghj"]
 font_size = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7qrc"]
-bg_color = Color(0.215902, 0.215902, 0.215902, 1)
+bg_color = Color(0.309702, 0.426264, 0.586519, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_taai3"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_tdjbx"]
+font_size = 28
 
 [node name="Principal" type="Control"]
 layout_mode = 3
@@ -36,6 +43,12 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
+script = ExtResource("1_tamjx")
+
+[node name="TempoJogo" type="Timer" parent="."]
+wait_time = 300.0
+one_shot = true
+autostart = true
 
 [node name="Fundo" type="TextureRect" parent="."]
 layout_mode = 1
@@ -44,16 +57,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_n0ukn")
+texture = ExtResource("1_f22hs")
 expand_mode = 1
 
 [node name="Recursos" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 534.0
 offset_bottom = 880.0
-texture = ExtResource("2_jm5jg")
+texture = ExtResource("2_o8201")
 expand_mode = 1
 
-[node name="GridContainer" type="GridContainer" parent="Recursos"]
+[node name="Orgaos" type="Control" parent="Recursos"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Recursos/Orgaos"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -67,11 +89,11 @@ theme_override_constants/h_separation = 30
 theme_override_constants/v_separation = 50
 columns = 3
 
-[node name="DefesaCIvil" type="TextureButton" parent="Recursos/GridContainer"]
+[node name="DefesaCivil" type="TextureButton" parent="Recursos/Orgaos/GridContainer"]
 layout_mode = 2
-texture_normal = ExtResource("3_64l05")
+texture_normal = ExtResource("3_2ibad")
 
-[node name="Label" type="Label" parent="Recursos/GridContainer/DefesaCIvil"]
+[node name="Label" type="Label" parent="Recursos/Orgaos/GridContainer/DefesaCivil"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -85,11 +107,11 @@ text = "DEFESA CIVIL"
 label_settings = SubResource("LabelSettings_fhghj")
 horizontal_alignment = 1
 
-[node name="Comlurb" type="TextureButton" parent="Recursos/GridContainer"]
+[node name="Comlurb" type="TextureButton" parent="Recursos/Orgaos/GridContainer"]
 layout_mode = 2
-texture_normal = ExtResource("4_u3qbp")
+texture_normal = ExtResource("4_b0cec")
 
-[node name="Label" type="Label" parent="Recursos/GridContainer/Comlurb"]
+[node name="Label" type="Label" parent="Recursos/Orgaos/GridContainer/Comlurb"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -103,11 +125,11 @@ text = "COMLURB"
 label_settings = SubResource("LabelSettings_fhghj")
 horizontal_alignment = 1
 
-[node name="Samu" type="TextureButton" parent="Recursos/GridContainer"]
+[node name="Samu" type="TextureButton" parent="Recursos/Orgaos/GridContainer"]
 layout_mode = 2
-texture_normal = ExtResource("5_3wiv5")
+texture_normal = ExtResource("5_d1a3r")
 
-[node name="Label" type="Label" parent="Recursos/GridContainer/Samu"]
+[node name="Label" type="Label" parent="Recursos/Orgaos/GridContainer/Samu"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -121,11 +143,11 @@ text = "SAMU"
 label_settings = SubResource("LabelSettings_fhghj")
 horizontal_alignment = 1
 
-[node name="Bombeiro" type="TextureButton" parent="Recursos/GridContainer"]
+[node name="Bombeiro" type="TextureButton" parent="Recursos/Orgaos/GridContainer"]
 layout_mode = 2
-texture_normal = ExtResource("6_ftixi")
+texture_normal = ExtResource("6_ga0v1")
 
-[node name="Label" type="Label" parent="Recursos/GridContainer/Bombeiro"]
+[node name="Label" type="Label" parent="Recursos/Orgaos/GridContainer/Bombeiro"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -139,11 +161,11 @@ text = "BOMBEIRO"
 label_settings = SubResource("LabelSettings_fhghj")
 horizontal_alignment = 1
 
-[node name="PoliciaMilitar" type="TextureButton" parent="Recursos/GridContainer"]
+[node name="PoliciaMilitar" type="TextureButton" parent="Recursos/Orgaos/GridContainer"]
 layout_mode = 2
-texture_normal = ExtResource("7_dqi4h")
+texture_normal = ExtResource("7_hmc2f")
 
-[node name="Label" type="Label" parent="Recursos/GridContainer/PoliciaMilitar"]
+[node name="Label" type="Label" parent="Recursos/Orgaos/GridContainer/PoliciaMilitar"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -157,11 +179,11 @@ text = "PM"
 label_settings = SubResource("LabelSettings_fhghj")
 horizontal_alignment = 1
 
-[node name="AlertaRio" type="TextureButton" parent="Recursos/GridContainer"]
+[node name="AlertaRio" type="TextureButton" parent="Recursos/Orgaos/GridContainer"]
 layout_mode = 2
-texture_normal = ExtResource("8_sakd4")
+texture_normal = ExtResource("8_55fxb")
 
-[node name="Label" type="Label" parent="Recursos/GridContainer/AlertaRio"]
+[node name="Label" type="Label" parent="Recursos/Orgaos/GridContainer/AlertaRio"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -175,11 +197,11 @@ text = "ALERTA RIO"
 label_settings = SubResource("LabelSettings_fhghj")
 horizontal_alignment = 1
 
-[node name="GeoRio" type="TextureButton" parent="Recursos/GridContainer"]
+[node name="GeoRio" type="TextureButton" parent="Recursos/Orgaos/GridContainer"]
 layout_mode = 2
-texture_normal = ExtResource("9_x1ynt")
+texture_normal = ExtResource("9_u2fx4")
 
-[node name="Label" type="Label" parent="Recursos/GridContainer/GeoRio"]
+[node name="Label" type="Label" parent="Recursos/Orgaos/GridContainer/GeoRio"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -193,11 +215,11 @@ text = "GEO-RIO"
 label_settings = SubResource("LabelSettings_fhghj")
 horizontal_alignment = 1
 
-[node name="RioLuz" type="TextureButton" parent="Recursos/GridContainer"]
+[node name="RioLuz" type="TextureButton" parent="Recursos/Orgaos/GridContainer"]
 layout_mode = 2
-texture_normal = ExtResource("10_7klfb")
+texture_normal = ExtResource("10_rnwhg")
 
-[node name="Label" type="Label" parent="Recursos/GridContainer/RioLuz"]
+[node name="Label" type="Label" parent="Recursos/Orgaos/GridContainer/RioLuz"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -211,11 +233,11 @@ text = "RIOLUZ"
 label_settings = SubResource("LabelSettings_fhghj")
 horizontal_alignment = 1
 
-[node name="RioAguas" type="TextureButton" parent="Recursos/GridContainer"]
+[node name="RioAguas" type="TextureButton" parent="Recursos/Orgaos/GridContainer"]
 layout_mode = 2
-texture_normal = ExtResource("11_jbtxq")
+texture_normal = ExtResource("11_63on3")
 
-[node name="Label" type="Label" parent="Recursos/GridContainer/RioAguas"]
+[node name="Label" type="Label" parent="Recursos/Orgaos/GridContainer/RioAguas"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -229,11 +251,11 @@ text = "RIO-ÁGUAS"
 label_settings = SubResource("LabelSettings_fhghj")
 horizontal_alignment = 1
 
-[node name="CetRio" type="TextureButton" parent="Recursos/GridContainer"]
+[node name="CetRio" type="TextureButton" parent="Recursos/Orgaos/GridContainer"]
 layout_mode = 2
-texture_normal = ExtResource("12_qffpv")
+texture_normal = ExtResource("12_4nook")
 
-[node name="Label" type="Label" parent="Recursos/GridContainer/CetRio"]
+[node name="Label" type="Label" parent="Recursos/Orgaos/GridContainer/CetRio"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -247,11 +269,11 @@ text = "CET-RIO"
 label_settings = SubResource("LabelSettings_fhghj")
 horizontal_alignment = 1
 
-[node name="Conservacao" type="TextureButton" parent="Recursos/GridContainer"]
+[node name="Conservacao" type="TextureButton" parent="Recursos/Orgaos/GridContainer"]
 layout_mode = 2
-texture_normal = ExtResource("13_sjxqn")
+texture_normal = ExtResource("13_8m6ct")
 
-[node name="Label" type="Label" parent="Recursos/GridContainer/Conservacao"]
+[node name="Label" type="Label" parent="Recursos/Orgaos/GridContainer/Conservacao"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -265,7 +287,7 @@ text = "CONSERVAÇÃO"
 label_settings = SubResource("LabelSettings_fhghj")
 horizontal_alignment = 1
 
-[node name="Enviar" type="Button" parent="Recursos"]
+[node name="Enviar" type="Button" parent="Recursos/Orgaos"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -281,94 +303,6 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "ENVIAR"
 
-[node name="celular" type="TextureRect" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.008
-anchor_top = 0.015
-anchor_right = 0.211
-anchor_bottom = 0.807
-offset_left = -0.264002
-offset_top = -0.200001
-offset_right = -0.0880127
-offset_bottom = 0.439941
-texture = ExtResource("2_jm5jg")
-expand_mode = 1
-
-[node name="telaCelular" type="GridContainer" parent="celular"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.078
-anchor_top = 0.062
-anchor_right = 0.912
-anchor_bottom = 0.714
-offset_left = -0.142002
-offset_top = -0.0720024
-offset_right = 0.0319824
-offset_bottom = -0.184021
-theme_override_constants/h_separation = 60
-theme_override_constants/v_separation = 100
-columns = 3
-
-[node name="defesaCivil" type="Button" parent="celular/telaCelular"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 53
-text = "hoi"
-
-[node name="policiaMilitar" type="Button" parent="celular/telaCelular"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 53
-text = "hoi"
-
-[node name="ambulancia" type="Button" parent="celular/telaCelular"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 53
-text = "hoi"
-
-[node name="rioAguas" type="Button" parent="celular/telaCelular"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 53
-text = "hoi"
-
-[node name="light" type="Button" parent="celular/telaCelular"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 53
-text = "hoi"
-
-[node name="orgao6" type="Button" parent="celular/telaCelular"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 53
-text = "hoi"
-
-[node name="orgao7" type="Button" parent="celular/telaCelular"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 53
-text = "hoi"
-
-[node name="orgao8" type="Button" parent="celular/telaCelular"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 53
-text = "hoi"
-
-[node name="orgao9" type="Button" parent="celular/telaCelular"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 53
-text = "hoi"
-
-[node name="enviar" type="Button" parent="celular"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.192
-anchor_top = 0.778
-anchor_right = 0.808
-anchor_bottom = 0.909
-offset_left = 0.112
-offset_top = 0.0319214
-offset_right = -0.112
-offset_bottom = -0.104004
-text = "Enviar"
-
 [node name="Mesa" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 7
@@ -382,7 +316,7 @@ offset_right = 915.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
-texture = ExtResource("3_hkoks")
+texture = ExtResource("14_s6u07")
 expand_mode = 1
 
 [node name="MonitorL" type="TextureButton" parent="Mesa"]
@@ -398,7 +332,7 @@ offset_right = -35.0
 offset_bottom = 94.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("15_e17ro")
+texture_normal = ExtResource("15_cyy2x")
 stretch_mode = 0
 
 [node name="MonitorR" type="Panel" parent="Mesa"]
@@ -416,6 +350,24 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_x7qrc")
 
+[node name="Nome" type="Label" parent="Mesa/MonitorR"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 12.0
+offset_right = 580.0
+offset_bottom = 85.0
+label_settings = SubResource("LabelSettings_taai3")
+vertical_alignment = 1
+
+[node name="Desc" type="Label" parent="Mesa/MonitorR"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 98.0
+offset_right = 582.0
+offset_bottom = 403.0
+label_settings = SubResource("LabelSettings_tdjbx")
+autowrap_mode = 3
+
 [node name="Ocorrencias" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 1
@@ -425,9 +377,11 @@ offset_left = -534.0
 offset_bottom = 880.0
 grow_horizontal = 0
 pivot_offset = Vector2(534, 0)
-texture = ExtResource("2_jm5jg")
+texture = ExtResource("2_o8201")
 expand_mode = 1
-script = ExtResource("16_phkmk")
+script = ExtResource("16_qdsup")
+intervalo_min = 15.0
+intervalo_max = 30.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Ocorrencias"]
 layout_mode = 1
@@ -436,13 +390,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -246.0
-offset_top = -398.0
-offset_right = 246.0
-offset_bottom = 398.0
+offset_left = -238.0
+offset_top = -407.0
+offset_right = 238.0
+offset_bottom = 401.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 4
 
 [node name="Timer" type="Timer" parent="Ocorrencias"]
 autostart = true
@@ -457,7 +411,7 @@ offset_right = 546.0
 offset_bottom = 336.0
 grow_horizontal = 2
 mouse_filter = 2
-texture = ExtResource("4_eca31")
+texture = ExtResource("17_a0ssq")
 expand_mode = 1
 
 [node name="Medidores" type="ColorRect" parent="Indicadores"]
@@ -489,7 +443,7 @@ offset_bottom = 382.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.459394, 0.459394)
-texture = ExtResource("5_ci5uk")
+texture = ExtResource("18_7e1eo")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Indicadores/Medidores"]
 layout_mode = 1
@@ -507,10 +461,10 @@ grow_vertical = 2
 theme_override_constants/separation = 75
 alignment = 1
 
-[node name="IndicaCalor" parent="Indicadores/Medidores/VBoxContainer" instance=ExtResource("7_huv8n")]
+[node name="IndicaCalor" parent="Indicadores/Medidores/VBoxContainer" instance=ExtResource("19_u85c2")]
 layout_mode = 2
 
-[node name="ProgressBar" parent="Indicadores/Medidores/VBoxContainer" instance=ExtResource("7_gbxmd")]
+[node name="ProgressBar" parent="Indicadores/Medidores/VBoxContainer" instance=ExtResource("20_0ipy2")]
 layout_mode = 2
 
 [node name="Estagio" type="ColorRect" parent="Indicadores"]
@@ -562,4 +516,16 @@ theme_override_font_sizes/font_size = 140
 text = "1"
 horizontal_alignment = 1
 
+[connection signal="pressed" from="Recursos/Orgaos/GridContainer/DefesaCivil" to="." method="_on_defesa_civil_pressed"]
+[connection signal="pressed" from="Recursos/Orgaos/GridContainer/Comlurb" to="." method="_on_comlurb_pressed"]
+[connection signal="pressed" from="Recursos/Orgaos/GridContainer/Samu" to="." method="_on_samu_pressed"]
+[connection signal="pressed" from="Recursos/Orgaos/GridContainer/Bombeiro" to="." method="_on_bombeiro_pressed"]
+[connection signal="pressed" from="Recursos/Orgaos/GridContainer/PoliciaMilitar" to="." method="_on_policia_militar_pressed"]
+[connection signal="pressed" from="Recursos/Orgaos/GridContainer/AlertaRio" to="." method="_on_alerta_rio_pressed"]
+[connection signal="pressed" from="Recursos/Orgaos/GridContainer/GeoRio" to="." method="_on_geo_rio_pressed"]
+[connection signal="pressed" from="Recursos/Orgaos/GridContainer/RioLuz" to="." method="_on_rio_luz_pressed"]
+[connection signal="pressed" from="Recursos/Orgaos/GridContainer/RioAguas" to="." method="_on_rio_aguas_pressed"]
+[connection signal="pressed" from="Recursos/Orgaos/GridContainer/CetRio" to="." method="_on_cet_rio_pressed"]
+[connection signal="pressed" from="Recursos/Orgaos/GridContainer/Conservacao" to="." method="_on_conservacao_pressed"]
+[connection signal="pressed" from="Recursos/Orgaos/Enviar" to="." method="_on_enviar_pressed"]
 [connection signal="timeout" from="Ocorrencias/Timer" to="Ocorrencias" method="_on_timer_timeout"]

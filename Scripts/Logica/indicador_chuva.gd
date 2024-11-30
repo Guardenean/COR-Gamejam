@@ -17,7 +17,7 @@ func _process(delta: float):
 	if time_elapsed >= update_interval:
 		# Gera e atualiza o valor da barra
 		progress_bar.value = _equilibrador()
-		_mede_calor(progress_bar.value)
+		#_mede_chuva(progress_bar.value)
 		time_elapsed = 0.0
 
 func _equilibrador() -> float:
@@ -27,14 +27,14 @@ func _equilibrador() -> float:
 	else:  # 30% de chance de estar entre 50% e 100%
 		return randf_range(max_value / 2, max_value)
 
-func _mede_calor(value: float):
+func _mede_chuva(value: float):
 	if value >= 90:
-		print("O Mundo está em chamas: 40°")
+		print("O MUNDO VAI CAAAAIIR! Estimativa: 150mm")
 	elif value >= 70:
-		print("Onda forta de calor: 28°")
+		print("chuvinha foite! Estimativa: 100mm")
 	elif value >= 50:
-		print("Está Calor: 25°")
+		print("Chuva mediana! Estimativa: 50mm")
 	elif value >= 30:
-		print("Calor: 20°")
+		print("Chuva goitosa! Estimativa: 20mm")
 	else:
-		print("Frio: abaixo dos 18°")
+		print("sem chuva ;-;. Estimativa: 0mm")

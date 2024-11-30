@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="UI"
-run/main_scene="res://Cenas/Inicio.tscn"
+run/main_scene="res://Cenas/Menu/Inicio.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
 
 [autoload]
 
-Desastres="*res://Scripts/Dicionario.gd"
+Desastres="*res://Scripts/Global/Dicionario.gd"
 
 [display]
 

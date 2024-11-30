@@ -1,5 +1,8 @@
 extends Node
 
+var id_count = 0 # CONTADOR PARA SETAR ID DE OCORRÊNCIAS
+var peso_estagio = 0 # PESO TOTAL PARA CÁLCULO DO ESTÁGIO DA CIDADE
+
 const desastres = {
 	0: {
 		"nome": "Acidente",
@@ -144,79 +147,79 @@ const desastres = {
 	"desc": "Áreas urbanas inundadas por excesso de chuva",
 	"peso": "4",
 	"orgaos": ["Rio Aguas", "Geo Rio", "Alerta Rio", "Conservação"]
-},
+	},
 	24: {
 	"nome": "Buraco na pista",
 	"desc": "Formação de cratera em via pública",
 	"peso": "2",
 	"orgaos": ["Conservação", "CET Rio"]
-},
+	},
 	25: {
 	"nome": "Derramamento de óleo",
 	"desc": "Acidente causando óleo em vias públicas",
 	"peso": "3",
 	"orgaos": ["CET Rio", "Conservação"]
-},
+	},
 	26: {
 	"nome": "Desabamento de muro",
 	"desc": "Muro de contenção desabou",
 	"peso": "3",
 	"orgaos": ["Geo Rio", "Conservação", "Bombeiro"]
-},
+	},
 	27: {
 	"nome": "Ameaça de bomba",
 	"desc": "Suspeita de dispositivo explosivo em área urbana",
 	"peso": "5",
 	"orgaos": ["Policia militar", "Bombeiro"]
-},
+	},
 	28: {
 	"nome": "Rompimento de barragem",
 	"desc": "Barragem se rompeu, liberando grande volume de água",
 	"peso": "5",
 	"orgaos": ["Geo Rio", "Rio Aguas", "Bombeiro", "Policia militar"]
-},
+	},
 	29: {
 	"nome": "Protesto em vias públicas",
 	"desc": "Manifestação interrompendo o tráfego",
 	"peso": "2",
 	"orgaos": ["Policia militar", "CET Rio"]
-},
+	},
 	30: {
 	"nome": "Incêndio florestal",
 	"desc": "Fogo alastrando em área de mata",
 	"peso": "4",
 	"orgaos": ["Bombeiro", "Alerta Rio", "Conservação"]
-},
+	},
 	31: {
 	"nome": "Desmoronamento de ponte",
 	"desc": "Estrutura de ponte colapsou",
 	"peso": "5",
 	"orgaos": ["Bombeiro", "CET Rio", "Geo Rio"]
-},
+	},
 	32: {
 	"nome": "Vazamento químico",
 	"desc": "Substância perigosa vazando em área industrial",
 	"peso": "5",
 	"orgaos": ["Bombeiro", "Policia militar", "Conservação"]
-},
+	},
 	33: {
 	"nome": "Ataque de animais selvagens",
 	"desc": "Animais silvestres em área urbana causando perigo",
 	"peso": "3",
 	"orgaos": ["Policia militar", "Conservação"]
-},
+	},
 	34: {
 	"nome": "Colisão ferroviária",
 	"desc": "Trens colidiram, causando danos e possíveis vítimas",
 	"peso": "5",
 	"orgaos": ["CET Rio", "Bombeiro", "SAMU"]
-},
+	},
 	35: {
 	"nome": "Desabamento em obra",
 	"desc": "Estruturas colapsaram em área de construção",
 	"peso": "4",
 	"orgaos": ["Geo Rio", "Bombeiro", "Conservação"]
-}
+	}
 }
 
 func seleciona_desastre():

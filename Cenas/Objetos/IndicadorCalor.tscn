@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://cymge8mq3ouik"]
 
-[ext_resource type="Script" path="res://Scripts/Calor.gd" id="1_5prsi"]
+[ext_resource type="Script" path="res://Scripts/Logica/Calor.gd" id="1_5prsi"]
+
 
 [node name="ProgressBar" type="ProgressBar"]
 anchors_preset = -1

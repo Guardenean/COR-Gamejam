@@ -1,17 +1,17 @@
 [gd_scene load_steps=13 format=3 uid="uid://wb3vqsdryar2"]
 
-[ext_resource type="Script" path="res://Scripts/Tutorial.gd" id="1_acpc8"]
-[ext_resource type="Texture2D" uid="uid://bwen7vpkv34dp" path="res://Assets/SpritesPrincipais/Icones/AlertaRio.png" id="2_djchx"]
-[ext_resource type="Texture2D" uid="uid://dyn06v801ya4c" path="res://Assets/SpritesPrincipais/Icones/Bombeiro.png" id="3_bwujg"]
-[ext_resource type="Texture2D" uid="uid://csyrnddrgehvx" path="res://Assets/SpritesPrincipais/Icones/CetRio.png" id="4_h3rwe"]
-[ext_resource type="Texture2D" uid="uid://cgb1lpj6ybrl2" path="res://Assets/SpritesPrincipais/Icones/Comlurb.png" id="5_iewjd"]
-[ext_resource type="Texture2D" uid="uid://mq0225hhh7hw" path="res://Assets/SpritesPrincipais/Icones/Conservacao.png" id="6_gpx4d"]
-[ext_resource type="Texture2D" uid="uid://d0wqbdwvgeg2l" path="res://Assets/SpritesPrincipais/Icones/DefesaCivil.png" id="7_bfxel"]
-[ext_resource type="Texture2D" uid="uid://cnh4g075uy4h8" path="res://Assets/SpritesPrincipais/Icones/GeoRio.png" id="8_6qbxu"]
-[ext_resource type="Texture2D" uid="uid://dij3me27ja51a" path="res://Assets/SpritesPrincipais/Icones/PoliciaMilitar.png" id="9_iapco"]
-[ext_resource type="Texture2D" uid="uid://cc62vfc4nfno5" path="res://Assets/SpritesPrincipais/Icones/RioAguas.png" id="10_2lsvj"]
-[ext_resource type="Texture2D" uid="uid://db8qqkpg3wdhl" path="res://Assets/SpritesPrincipais/Icones/RioLuz.png" id="11_sc1kj"]
-[ext_resource type="Texture2D" uid="uid://bycer6w1hu7la" path="res://Assets/SpritesPrincipais/Icones/SAMU.png" id="12_3reds"]
+[ext_resource type="Script" path="res://Scripts/Menu/Tutorial.gd" id="1_dakqn"]
+[ext_resource type="Texture2D" uid="uid://bwen7vpkv34dp" path="res://Assets/SpritesPrincipais/Icones/AlertaRio.png" id="2_ymu2l"]
+[ext_resource type="Texture2D" uid="uid://csyrnddrgehvx" path="res://Assets/SpritesPrincipais/Icones/CetRio.png" id="3_6drjh"]
+[ext_resource type="Texture2D" uid="uid://dyn06v801ya4c" path="res://Assets/SpritesPrincipais/Icones/Bombeiro.png" id="4_icuxi"]
+[ext_resource type="Texture2D" uid="uid://cgb1lpj6ybrl2" path="res://Assets/SpritesPrincipais/Icones/Comlurb.png" id="5_1ioen"]
+[ext_resource type="Texture2D" uid="uid://mq0225hhh7hw" path="res://Assets/SpritesPrincipais/Icones/Conservacao.png" id="6_o4mbc"]
+[ext_resource type="Texture2D" uid="uid://d0wqbdwvgeg2l" path="res://Assets/SpritesPrincipais/Icones/DefesaCivil.png" id="7_qltc8"]
+[ext_resource type="Texture2D" uid="uid://dij3me27ja51a" path="res://Assets/SpritesPrincipais/Icones/PoliciaMilitar.png" id="8_nvujq"]
+[ext_resource type="Texture2D" uid="uid://db8qqkpg3wdhl" path="res://Assets/SpritesPrincipais/Icones/RioLuz.png" id="9_fsqye"]
+[ext_resource type="Texture2D" uid="uid://bycer6w1hu7la" path="res://Assets/SpritesPrincipais/Icones/SAMU.png" id="10_8wx6q"]
+[ext_resource type="Texture2D" uid="uid://cnh4g075uy4h8" path="res://Assets/SpritesPrincipais/Icones/GeoRio.png" id="11_8gvjh"]
+[ext_resource type="Texture2D" uid="uid://cc62vfc4nfno5" path="res://Assets/SpritesPrincipais/Icones/RioAguas.png" id="12_7k8qk"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -20,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_acpc8")
+script = ExtResource("1_dakqn")
 
 [node name="Aprentação Jogo" type="Panel" parent="."]
 layout_mode = 1
@@ -111,7 +111,7 @@ offset_bottom = 574.0
 
 [node name="AlertaRio" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer"]
 position = Vector2(-1647, -324)
-texture = ExtResource("2_djchx")
+texture = ExtResource("2_ymu2l")
 
 [node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer/AlertaRio"]
 anchors_preset = -1
@@ -129,7 +129,7 @@ Objetivo Alertar a população"
 
 [node name="CetRio" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer"]
 position = Vector2(-1647, -159)
-texture = ExtResource("4_h3rwe")
+texture = ExtResource("3_6drjh")
 
 [node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer/CetRio"]
 anchors_preset = -1
@@ -147,7 +147,7 @@ Objetivo ameinizar o meio de trasnporte"
 
 [node name="Bombeiros" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer"]
 position = Vector2(-1647, 1)
-texture = ExtResource("3_bwujg")
+texture = ExtResource("4_icuxi")
 
 [node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer/Bombeiros"]
 anchors_preset = -1
@@ -170,7 +170,7 @@ offset_bottom = 40.0
 
 [node name="Comlurb" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer2"]
 position = Vector2(1103, 242)
-texture = ExtResource("5_iewjd")
+texture = ExtResource("5_1ioen")
 
 [node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer2/Comlurb"]
 anchors_preset = -1
@@ -189,7 +189,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Conservacao" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer2"]
 position = Vector2(1103, 390)
-texture = ExtResource("6_gpx4d")
+texture = ExtResource("6_o4mbc")
 
 [node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer2/Conservacao"]
 anchors_preset = -1
@@ -208,7 +208,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="DefesaCivil" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer2"]
 position = Vector2(1103, 552)
-texture = ExtResource("7_bfxel")
+texture = ExtResource("7_qltc8")
 
 [node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer2/DefesaCivil"]
 anchors_preset = -1
@@ -233,7 +233,7 @@ offset_bottom = 262.0
 
 [node name="PoliciaMilitar" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer3"]
 position = Vector2(4, 38)
-texture = ExtResource("9_iapco")
+texture = ExtResource("8_nvujq")
 
 [node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer3/PoliciaMilitar"]
 anchors_preset = -1
@@ -251,7 +251,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="RioLuz" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer3"]
 position = Vector2(4, 178)
-texture = ExtResource("11_sc1kj")
+texture = ExtResource("9_fsqye")
 
 [node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer3/RioLuz"]
 anchors_preset = -1
@@ -269,7 +269,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="SAMU" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer3"]
 position = Vector2(4, 326)
-texture = ExtResource("12_3reds")
+texture = ExtResource("10_8wx6q")
 
 [node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer3/SAMU"]
 anchors_preset = -1
@@ -294,7 +294,7 @@ offset_bottom = 550.0
 
 [node name="GeoRio" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer4"]
 position = Vector2(-1332, 173)
-texture = ExtResource("8_6qbxu")
+texture = ExtResource("11_8gvjh")
 
 [node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer4/GeoRio"]
 anchors_preset = -1
@@ -312,7 +312,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="RioAguas" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer4"]
 position = Vector2(-398, 173)
-texture = ExtResource("10_2lsvj")
+texture = ExtResource("12_7k8qk")
 
 [node name="Label" type="Label" parent="Orgãos Jogo/HBoxContainer4/RioAguas"]
 anchors_preset = -1
