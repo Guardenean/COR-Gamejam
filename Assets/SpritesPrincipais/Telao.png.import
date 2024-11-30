@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://t3o8wc5xqh8y"
-path="res://.godot/imported/Mesa.png-c6c352df4f001ce4d5a6714ce22fc9c3.ctex"
+uid="uid://q56a3pr5rlpp"
+path="res://.godot/imported/Telao.png-f95d8a7fe266b6122bf0d2edd7cec6fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Mesa.png"
-dest_files=["res://.godot/imported/Mesa.png-c6c352df4f001ce4d5a6714ce22fc9c3.ctex"]
+source_file="res://Assets/SpritesPrincipais/Telao.png"
+dest_files=["res://.godot/imported/Telao.png-f95d8a7fe266b6122bf0d2edd7cec6fc.ctex"]
 
 [params]
 

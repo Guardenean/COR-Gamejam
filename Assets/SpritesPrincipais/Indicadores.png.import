@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boeds8saotjwn"
-path="res://.godot/imported/TelaoL.png-061947ea75895d2152ea0d08a07236ac.ctex"
+uid="uid://bluc56pxhhii1"
+path="res://.godot/imported/Indicadores.png-a9dc9305a87475b0f39e013427768567.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/TelaoL.png"
-dest_files=["res://.godot/imported/TelaoL.png-061947ea75895d2152ea0d08a07236ac.ctex"]
+source_file="res://Assets/SpritesPrincipais/Indicadores.png"
+dest_files=["res://.godot/imported/Indicadores.png-a9dc9305a87475b0f39e013427768567.ctex"]
 
 [params]
 
