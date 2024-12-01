@@ -21,7 +21,7 @@ func _process(delta: float):
 		# Gera e atualiza o valor da barra
 		chuva_atual = _equilibrador()  # Armazena o valor gerado
 		progress_bar.value = chuva_atual
-		_mede_chuva(chuva_atual)  # Passa o valor armazenado para a função
+		#_mede_chuva(chuva_atual)  # Passa o valor armazenado para a função
 		time_elapsed = 0.0
 
 func _equilibrador() -> float:
@@ -35,16 +35,16 @@ func _mede_chuva(valueChuva: float):
 	# Armazena a última medida de chuva
 	chuva_atual = valueChuva
 	
-	if valueChuva >= 90:
-		print("O MUNDO VAI CAAAAIIR! Estimativa: 150mm")
-	elif valueChuva >= 70:
-		print("chuvinha foite! Estimativa: 100mm")
-	elif valueChuva >= 50:
-		print("Chuva mediana! Estimativa: 50mm")
-	elif valueChuva >= 30:
-		print("Chuva goitosa! Estimativa: 20mm")
-	else:
-		print("sem chuva ;-;. Estimativa: 0mm")
+	#if valueChuva >= 90:
+		#print("O MUNDO VAI CAAAAIIR! Estimativa: 150mm")
+	#elif valueChuva >= 70:
+		#print("chuvinha foite! Estimativa: 100mm")
+	#elif valueChuva >= 50:
+		#print("Chuva mediana! Estimativa: 50mm")
+	#elif valueChuva >= 30:
+		#print("Chuva goitosa! Estimativa: 20mm")
+	#else:
+		#print("sem chuva ;-;. Estimativa: 0mm")
 
 # Função para obter o valor armazenado
 func get_chuva_atual() -> float:

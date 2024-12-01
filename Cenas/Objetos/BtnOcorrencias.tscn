@@ -1,7 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmmpnq0dxrobe"]
+[gd_scene load_steps=7 format=3 uid="uid://bmmpnq0dxrobe"]
 
 [ext_resource type="Texture2D" uid="uid://beo8r5usewlyr" path="res://Assets/SpritesPrincipais/BtnOcorrencia.png" id="1_bx6bt"]
+[ext_resource type="Texture2D" uid="uid://k8lxt6tlbko6" path="res://Assets/SpritesPrincipais/BtnOcorrenciaNO.png" id="1_hhle4"]
 [ext_resource type="Script" path="res://Scripts/Logica/btn_ocorrencias.gd" id="1_t5v18"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cxb84"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4egn"]
+bg_color = Color(0.173432, 0.636242, 0.925763, 0.72549)
 
 [sub_resource type="LabelSettings" id="LabelSettings_x3lds"]
 font_size = 36
@@ -18,8 +24,21 @@ offset_right = 235.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("1_bx6bt")
+texture_normal = ExtResource("1_hhle4")
+texture_focused = ExtResource("1_bx6bt")
 script = ExtResource("1_t5v18")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_cxb84")
+theme_override_styles/fill = SubResource("StyleBoxFlat_v4egn")
+show_percentage = false
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

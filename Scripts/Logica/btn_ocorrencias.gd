@@ -6,7 +6,10 @@ var area_des
 var area_nome
 var principal
 var peso
+
 @onready var label = $Label
+@onready var bar = $ProgressBar
+@onready var timer = $Timer
 
 func _ready() -> void:
 	# SETA O ID
@@ -23,9 +26,17 @@ func _ready() -> void:
 	
 	# RECEBE O PESO
 	peso = desaster.peso.to_int()
+	Desastres.peso_estagio += peso
+	print(Desastres.peso_estagio)
 	
 	# SETA O NOME DO BOTÃO
 	label.text = desaster.nome
+
+func _process(_delta):
+	# MOVE VALOR DA BARRA QUANDO ANALISANDO
+	if !timer.is_stopped():
+		bar.value = (1 - (timer.time_left / timer.wait_time)) * 100
+	else: bar.value = 0
 
 func _on_pressed() -> void:
 	# SETA O MONITOR DE IMAGEM
@@ -40,10 +51,9 @@ func _on_pressed() -> void:
 	print(name)
 
 func resolve(orgaos : Array) -> void:
-	# INICIA O TIMER
-	$Timer.start()
-	# ESPERA ELE TERMINAR
-	await $Timer.timeout
+	timer.start() # INICIA O TIMER
+	await timer.timeout # ESPERA TIMER TERMINAR
+	
 	# CHECA SE O NÚMERO DE ÓRGAOS É CERTO
 	if orgaos.size() == desaster.orgaos.size():
 		var count = 0
@@ -63,7 +73,9 @@ func resolve(orgaos : Array) -> void:
 	# SENÃO, FRACASSO E AUMENTA PESO DE ESTÁGIO
 		else:
 			print("Falhou...")
-			peso += 1
+			Desastres.peso_estagio += 1
+			print(Desastres.peso_estagio)
 	else:
 		print("Falhou...")
-		peso += 1
+		Desastres.peso_estagio += 1
+		print(Desastres.peso_estagio)

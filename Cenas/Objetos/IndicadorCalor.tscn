@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://Scripts/Logica/Calor.gd" id="1_5prsi"]
 
-
 [node name="ProgressBar" type="ProgressBar"]
 anchors_preset = -1
 anchor_right = 0.216

@@ -1,12 +1,11 @@
 extends Control
 
 var ocor_node : Control
-
-@onready var tempo_jogo = $TempoJogo
 var ocor_selection = []
 
 @onready var monitor_l = $Mesa/MonitorL
 @onready var grid_recursos = $Recursos/Orgaos/GridContainer
+
 
 # LISTA DE RECURSOS SELECIONADOS PARA ENVIO
 var selected = {
