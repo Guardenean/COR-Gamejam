@@ -4,7 +4,7 @@ extends ColorRect
 @onready var calor = $"../Medidores/VBoxContainer/IndicaCalor"
 @onready var estagio = $estagioNivel
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	
 	var indice_chuva = chuva.chuva_atual
 	var indice_calor = calor.calor_atual

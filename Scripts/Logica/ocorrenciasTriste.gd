@@ -1,6 +1,6 @@
 extends Node
 
-const ocor = preload("res://Cenas/BtnOcorrencias.tscn")
+const ocor = preload("res://Cenas/Objetos/BtnOcorrencias.tscn")
 @onready var box: VBoxContainer = $containerOcorrencias
 
 var min_ocor = 1
