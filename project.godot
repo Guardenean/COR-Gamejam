@@ -31,6 +31,7 @@ window/stretch/mode="canvas_items"
 
 folder_colors={
 "res://Assets/": "purple",
+"res://Cenas/": "blue",
 "res://Cenas/Old/": "red",
 "res://Scripts/": "green",
 "res://Teste/": "red"
