@@ -59,6 +59,6 @@ func _mede_estagio(calculo: float):
 
 func _on_tempo_jogo_timeout():
 	if estagio >= 4:
-		print("PERDEU")
+		get_tree().change_scene_to_file("res://Cenas/Menu/Derrota.tscn")
 	else:
-		print("GANHOU")
+		get_tree().change_scene_to_file("res://Cenas/Menu/Vitoria.tscn")

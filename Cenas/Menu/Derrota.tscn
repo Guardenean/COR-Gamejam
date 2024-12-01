@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmih5mowujbct"]
+
+[ext_resource type="Script" path="res://Scripts/Logica/Derrota.gd" id="1_whgas"]
+
+[node name="Vitoria" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_whgas")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1203.0
+offset_top = -534.0
+offset_right = 1209.0
+offset_bottom = 544.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.293
+anchor_right = 0.5
+anchor_bottom = 0.293
+offset_left = -643.0
+offset_top = -205.854
+offset_right = 643.0
+offset_bottom = 206.146
+theme_override_colors/font_color = Color(0.919281, 4.47616e-06, 1.15514e-06, 1)
+theme_override_font_sizes/font_size = 90
+text = "VOCÊ FALHOU COM A CIDADE"
+
+[node name="Main Menu" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505
+anchor_top = 0.821
+anchor_right = 0.505
+anchor_bottom = 0.821
+offset_left = -333.06
+offset_top = -61.038
+offset_right = 330.94
+offset_bottom = 59.962
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Menu Principal"
+
+[node name="Retry" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505
+anchor_top = 0.64
+anchor_right = 0.505
+anchor_bottom = 0.64
+offset_left = -334.06
+offset_top = -60.92
+offset_right = 331.94
+offset_bottom = 60.08
+theme_override_font_sizes/font_size = 40
+text = "Tentar Novamente"
+
+[connection signal="pressed" from="Panel/Main Menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Panel/Retry" to="." method="_on_retry_pressed"]
