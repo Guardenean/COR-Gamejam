@@ -6,7 +6,7 @@ var area_des
 var area_nome
 var principal
 var peso
-
+var tempo_react = 0
 @onready var label = $Label
 @onready var bar = $ProgressBar
 @onready var timer = $Timer
@@ -32,11 +32,14 @@ func _ready() -> void:
 	# SETA O NOME DO BOTÃO
 	label.text = desaster.nome
 
-func _process(_delta):
+func _process(delta):
 	# MOVE VALOR DA BARRA QUANDO ANALISANDO
 	if !timer.is_stopped():
 		bar.value = (1 - (timer.time_left / timer.wait_time)) * 100
 	else: bar.value = 0
+	
+	# ARMAZENA TEMPO DE EXISTÊNCIA
+	tempo_react += delta
 
 func _on_pressed() -> void:
 	# SETA O MONITOR DE IMAGEM
@@ -59,7 +62,6 @@ func resolve(orgaos : Array) -> void:
 		var count = 0
 		# CHECA O NOME DOS ÓRGÃOS
 		for i in orgaos:
-			print(i)
 			if desaster.orgaos.has(i):
 				count += 1
 		
@@ -67,6 +69,8 @@ func resolve(orgaos : Array) -> void:
 		if count >= orgaos.size():
 			print("Sucesso!")
 			Desastres.peso_estagio -= peso
+			Desastres.num_ocor += 1
+			Desastres.soma_tempo_react += 0
 			principal.ocor_node = null
 			queue_free()
 			

@@ -2,6 +2,8 @@ extends Node
 
 var id_count = 0 # CONTADOR PARA SETAR ID DE OCORRÊNCIAS
 var peso_estagio = 0 # PESO TOTAL PARA CÁLCULO DO ESTÁGIO DA CIDADE
+var soma_tempo_react = 0 # SOMA DO TEMPO LEVADO PARA SOLUCIONAR CADA OCORRÊNCIA
+var num_ocor = 0 # NÚMERO DE OCORRÊNCIAS SOLUCIONADAS
 
 const desastres = { # DADOS DE DESASTRES
 	0: {
@@ -16,49 +18,49 @@ const desastres = { # DADOS DE DESASTRES
 		"desc": "Chuva ultrapassou os 10mm/h",
 		"peso": "1",
 		"orgaos": ["alerta_rio", "conservacao"],
-		"img" : "acidente"
+		"img" : "chuva"
 	},
 	2: {
 		"nome": "Chuva Moderada",
 		"desc": "Chuva ultrapassou os 20mm/h, possíveis alagamentos",
 		"peso": "2",
 		"orgaos": ["alerta_rio", "conservacao", "rioaguas"],
-		"img" : "acidente"
+		"img" : "chuva"
 	},
 	3: {
 		"nome": "Chuva Forte",
 		"desc": "Chuva ultrapassou os 30mm/h, grandes áreas de deslizamento",
 		"peso": "3",
 		"orgaos": ["alerta_rio", "geo_rio", "conservacao"],
-		"img" : "acidente"
+		"img" : "chuva"
 	},
 	4: {
 		"nome": "Evento",
 		"desc": "Final do Jogo de futebol, grande chance de confronto de torcidas",
 		"peso": "2",
 		"orgaos": ["cet_rio", "pm"],
-		"img" : "acidente"
+		"img" : "evento"
 	},
 	5: {
 		"nome": "Grande Evento",
 		"desc": "Show de artista vindo de fora, possíveis assaltos na área ao redor",
 		"peso": "4",
 		"orgaos": ["cet_rio", "pm", "conservacao"],
-		"img" : "acidente"
+		"img" : "evento"
 	},
 	6: {
 		"nome": "Queda de árvore",
 		"desc": "Árvore em queda de residência",
 		"peso": "1",
 		"orgaos": ["conservacao", "bombeiro"],
-		"img" : "acidente"
+		"img" : "arvore"
 	},
 	7: {
 		"nome": "Queda de árvore em uma moradia",
 		"desc": "Árvore em queda de fios de eletricidade, possível incêndio de árvore e gerador",
 		"peso": "2",
 		"orgaos": ["conservacao", "bombeiro", "rioluz"],
-		"img" : "acidente"
+		"img" : "arvore"
 	},
 	8: {
 		"nome": "Maré Alta",
@@ -86,7 +88,7 @@ const desastres = { # DADOS DE DESASTRES
 		"desc": "Fogo se alastrando sobre prédio, grande chance de pessoas presas no prédio, pessoas descontroladas",
 		"peso": "4",
 		"orgaos": ["bombeiro", "pm", "conservacao"],
-		"img" : "acidente"
+		"img" : "incendio"
 	},
 	12: {
 		"nome": "Rompimento de tubulação",
@@ -107,7 +109,7 @@ const desastres = { # DADOS DE DESASTRES
 		"desc": "Queda em carro de família, chance de haver feridos e fatalidades",
 		"peso": "3",
 		"orgaos": ["bombeiro", "conservacao", "samu"],
-		"img" : "acidente"
+		"img" : "arvore"
 	},
 	15: {
 		"nome": "Lixo Acumulado Baixo",

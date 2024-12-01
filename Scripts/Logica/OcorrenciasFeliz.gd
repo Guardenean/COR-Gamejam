@@ -4,14 +4,12 @@ const ocor = preload("res://Cenas/Objetos/BtnOcorrencias.tscn")
 @onready var box = $VBoxContainer
 @onready var timer = $Timer
 
-@export var max_ocor = 4
-@export var intervalo_min = 0.0#20.0
-@export var intervalo_max = 2.0#40.0
+@export var max_ocor : int = 4
+@export var intervalo_min : float = 0.0#20.0
+@export var intervalo_max : float = 2.0#40.0
 
 func _ready() -> void:
-	#timer.wait_time = randf_range(intervalo_min, intervalo_max)
 	altera_espera()
-	print(timer.wait_time)
 
 func _on_timer_timeout() -> void:
 	# Verifica se já atingiu o limite de botões
@@ -24,5 +22,6 @@ func _on_timer_timeout() -> void:
 	
 	altera_espera()
 
-func altera_espera(): # ALTERA O TEMPO DE SPAWN
+func altera_espera() -> void: # ALTERA O TEMPO DE SPAWN
 	timer.wait_time = randf_range(intervalo_min, intervalo_max)
+	print(timer.wait_time)

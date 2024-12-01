@@ -34,7 +34,8 @@ folder_colors={
 "res://Cenas/": "blue",
 "res://Cenas/Old/": "red",
 "res://Scripts/": "green",
-"res://Teste/": "red"
+"res://Teste/": "red",
+"res://zExport/": "pink"
 }
 
 [input_devices]
@@ -45,3 +46,4 @@ pointing/emulate_touch_from_mouse=true
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

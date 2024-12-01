@@ -5,7 +5,7 @@ var ocor_selection = []
 
 @onready var monitor_l = $Mesa/MonitorL
 @onready var grid_recursos = $Recursos/Orgaos/GridContainer
-
+@onready var recursos = $Recursos
 
 # LISTA DE RECURSOS SELECIONADOS PARA ENVIO
 var selected = {
@@ -70,7 +70,7 @@ func check_selected(id):
 
 # FUNÇÕES ON CLICK ABAIXO
 func _on_defesa_civil_pressed() -> void:
-	if ocor_node == null: return
+	if ocor_node == null or recursos.recursos["defesa_civil"] <= 0: return
 	var r = check_selected("defesa_civil")
 	var b = get_node("Recursos/Orgaos/GridContainer/DefesaCivil")
 	match r:
@@ -80,7 +80,7 @@ func _on_defesa_civil_pressed() -> void:
 			b.texture_normal = selected["defesa_civil"][2]
 
 func _on_comlurb_pressed() -> void:
-	if ocor_node == null: return
+	if ocor_node == null or recursos.recursos["comlurb"] <= 0: return
 	var r = check_selected("comlurb")
 	var b = get_node("Recursos/Orgaos/GridContainer/Comlurb")
 	match r:
@@ -90,7 +90,7 @@ func _on_comlurb_pressed() -> void:
 			b.texture_normal = selected["comlurb"][2]
 
 func _on_samu_pressed() -> void:
-	if ocor_node == null: return
+	if ocor_node == null or recursos.recursos["samu"] <= 0: return
 	var r = check_selected("samu")
 	var b = get_node("Recursos/Orgaos/GridContainer/Samu")
 	match r:
@@ -100,7 +100,7 @@ func _on_samu_pressed() -> void:
 			b.texture_normal = selected["samu"][2]
 
 func _on_bombeiro_pressed() -> void:
-	if ocor_node == null: return
+	if ocor_node == null or recursos.recursos["bombeiro"] <= 0: return
 	var r = check_selected("bombeiro")
 	var b = get_node("Recursos/Orgaos/GridContainer/Bombeiro")
 	match r:
@@ -110,7 +110,7 @@ func _on_bombeiro_pressed() -> void:
 			b.texture_normal = selected["bombeiro"][2]
 
 func _on_policia_militar_pressed() -> void:
-	if ocor_node == null: return
+	if ocor_node == null or recursos.recursos["pm"] <= 0: return
 	var r = check_selected("pm")
 	var b = get_node("Recursos/Orgaos/GridContainer/PoliciaMilitar")
 	match r:
@@ -120,7 +120,7 @@ func _on_policia_militar_pressed() -> void:
 			b.texture_normal = selected["pm"][2]
 
 func _on_alerta_rio_pressed() -> void:
-	if ocor_node == null: return
+	if ocor_node == null or recursos.recursos["alerta_rio"] <= 0: return
 	var r = check_selected("alerta_rio")
 	var b = get_node("Recursos/Orgaos/GridContainer/AlertaRio")
 	match r:
@@ -130,7 +130,7 @@ func _on_alerta_rio_pressed() -> void:
 			b.texture_normal = selected["alerta_rio"][2]
 
 func _on_geo_rio_pressed() -> void:
-	if ocor_node == null: return
+	if ocor_node == null or recursos.recursos["geo_rio"] <= 0: return
 	var r = check_selected("geo_rio")
 	var b = get_node("Recursos/Orgaos/GridContainer/GeoRio")
 	match r:
@@ -140,7 +140,7 @@ func _on_geo_rio_pressed() -> void:
 			b.texture_normal = selected["geo_rio"][2]
 
 func _on_rio_luz_pressed() -> void:
-	if ocor_node == null: return
+	if ocor_node == null or recursos.recursos["rioluz"] <= 0: return
 	var r = check_selected("rioluz")
 	var b = get_node("Recursos/Orgaos/GridContainer/RioLuz")
 	match r:
@@ -150,7 +150,7 @@ func _on_rio_luz_pressed() -> void:
 			b.texture_normal = selected["rioluz"][2]
 
 func _on_rio_aguas_pressed() -> void:
-	if ocor_node == null: return
+	if ocor_node == null or recursos.recursos["rioaguas"] <= 0: return
 	var r = check_selected("rioaguas")
 	var b = get_node("Recursos/Orgaos/GridContainer/RioAguas")
 	match r:
@@ -160,7 +160,7 @@ func _on_rio_aguas_pressed() -> void:
 			b.texture_normal = selected["rioaguas"][2]
 
 func _on_cet_rio_pressed() -> void:
-	if ocor_node == null: return
+	if ocor_node == null or recursos.recursos["cet_rio"] <= 0: return
 	var r = check_selected("cet_rio")
 	var b = get_node("Recursos/Orgaos/GridContainer/CetRio")
 	match r:
@@ -170,7 +170,7 @@ func _on_cet_rio_pressed() -> void:
 			b.texture_normal = selected["cet_rio"][2]
 
 func _on_conservacao_pressed() -> void:
-	if ocor_node == null: return
+	if ocor_node == null or recursos.recursos["conservacao"] <= 0: return
 	var r = check_selected("conservacao")
 	var b = get_node("Recursos/Orgaos/GridContainer/Conservacao")
 	match r:
@@ -187,7 +187,21 @@ func _on_enviar_pressed() -> void:
 	# RESETA RECURSOS SELECIONADOS
 	for i in selected:
 		if selected[i][0] == true:
+			recursos.recursos[i] -= 1
+			tempo_recarga(i)
 			selected[i][0] = false
 	reseta_imagens()
 	ocor_selection = []
 #endregion
+
+func tempo_recarga(id):
+	var gerador_timer = Timer.new()
+	add_child(gerador_timer)
+	gerador_timer.one_shot = true
+	gerador_timer.wait_time = 10.0
+	gerador_timer.timeout.connect(_on_timer_timeout.bind(gerador_timer, id))
+	gerador_timer.start()
+
+func _on_timer_timeout(time : Timer, i : String):
+	recursos.recursos[i] += 1
+	time.queue_free()

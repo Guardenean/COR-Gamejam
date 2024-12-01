@@ -1,8 +1,6 @@
 extends ColorRect
 
 @onready var principal = $"../.."
-#@onready var chuva = $"../Medidores/VBoxContainer/ProgressBar"
-#@onready var calor = $"../Medidores/VBoxContainer/IndicaCalor"
 @onready var medidores = $"../Medidores"
 @onready var estagio_label = $estagioNivel
 var estagio
@@ -55,7 +53,6 @@ func _mede_estagio(calculo: float):
 	#else:
 		#estagio.text = "1"
 		#color = color_1 #Color(0, 1, 0)  # Verde
-
 
 func _on_tempo_jogo_timeout():
 	if estagio >= 4:

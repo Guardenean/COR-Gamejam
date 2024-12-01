@@ -1,11 +1,11 @@
 extends TextureButton
 
 const imagens = {
-	"acidente" : preload("res://Assets/icon.svg"),
-	"chuva" : preload("res://Assets/icon.svg"),
-	"evento" : preload("res://Assets/icon.svg"),
-	"arvore" : preload("res://Assets/icon.svg"),
-	"incêndio" : preload("res://Assets/icon.svg"),
+	"acidente" : preload("res://Assets/SpritesPrincipais/Monitor/Acidente.png"),
+	"chuva" : preload("res://Assets/SpritesPrincipais/Monitor/Chuva.png"),
+	"evento" : preload("res://Assets/SpritesPrincipais/Monitor/Evento.png"),
+	"arvore" : preload("res://Assets/SpritesPrincipais/Monitor/Arvore.png"),
+	"incendio" : preload("res://Assets/SpritesPrincipais/Monitor/Incendio.png"),
 }
 
 func muda_imagem(img) -> void:
