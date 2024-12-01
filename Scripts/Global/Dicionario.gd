@@ -218,7 +218,7 @@ const desastres = { # DADOS DE DESASTRES
 		"nome": "Incêndio florestal",
 		"desc": "Fogo alastrando em área de mata",
 		"peso": "4",
-		"orgaos": ["bombeiro", "alerta_rio", "conservacao"],
+		"orgaos": ["bombeiro", "alerta_rio"],
 		"img" : "acidente"
 	},
 	31: {
@@ -237,9 +237,9 @@ const desastres = { # DADOS DE DESASTRES
 	},
 	33: {
 		"nome": "Ataque de animais selvagens",
-		"desc": "Animais silvestres em área urbana causando perigo",
+		"desc": "Animais silvestres em área urbana causando perigo. 4 feridos no local, com risco de aumento no número de vítimas",
 		"peso": "3",
-		"orgaos": ["pm", "conservacao"],
+		"orgaos": ["pm", "conservacao", "samu"],
 		"img" : "acidente"
 	},
 	34: {
@@ -253,7 +253,7 @@ const desastres = { # DADOS DE DESASTRES
 		"nome": "Desabamento em obra",
 		"desc": "Estruturas colapsaram em área de construção",
 		"peso": "4",
-		"orgaos": ["geo_rio", "bombeiro", "conservacao"],
+		"orgaos": ["geo_rio", "bombeiro"],
 		"img" : "acidente"
 	}
 }

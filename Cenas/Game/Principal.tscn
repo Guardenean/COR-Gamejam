@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bo1lqd22ai3kg"]
+[gd_scene load_steps=27 format=3 uid="uid://bo1lqd22ai3kg"]
 
 [ext_resource type="Texture2D" uid="uid://dmxywrp1usmrg" path="res://Assets/SpritesPrincipais/Background.jpg" id="1_f22hs"]
 [ext_resource type="Script" path="res://Scripts/Logica/GameController.gd" id="1_tamjx"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://p77uko42grrj" path="res://Assets/SpritesPrincipais/IconMedidores.png" id="18_7e1eo"]
 [ext_resource type="PackedScene" uid="uid://cymge8mq3ouik" path="res://Cenas/Objetos/IndicadorCalor.tscn" id="19_u85c2"]
 [ext_resource type="PackedScene" uid="uid://d1p1y5klpaarj" path="res://Cenas/Objetos/IndicadorChuva.tscn" id="20_0ipy2"]
+[ext_resource type="Script" path="res://Scripts/Logica/estagio.gd" id="22_86vf3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fhghj"]
 font_size = 20
@@ -481,6 +482,7 @@ offset_bottom = 143.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.233832, 0.912893, 0.526725, 1)
+script = ExtResource("22_86vf3")
 
 [node name="estagio" type="Label" parent="Indicadores/Estagio"]
 layout_mode = 1
