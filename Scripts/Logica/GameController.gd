@@ -7,6 +7,8 @@ var ocor_selection = []
 @onready var grid_recursos = $Recursos/Orgaos/GridContainer
 @onready var recursos = $Recursos
 
+@onready var sfx = $SFX
+
 # LISTA DE RECURSOS SELECIONADOS PARA ENVIO
 var selected = {
 	"defesa_civil" : [false, preload("res://Assets/SpritesPrincipais/Icones/DefesaCivil.png"),
@@ -56,6 +58,8 @@ func reseta_imagens():
 #region RECURSOS
 # CHECAGEM AO CLICAR EM RECURSO
 func check_selected(id):
+	sfx.stream = preload("res://Assets/SFX/Select.wav")
+	sfx.play()
 	match selected[id][0]:
 		false: # SE FOR FALSO, MARCA COMO SELECIONADO E ADICIONA À LISTA DE ENVIO
 			selected[id][0] = true
@@ -180,6 +184,8 @@ func _on_conservacao_pressed() -> void:
 			b.texture_normal = selected["conservacao"][2]
 
 func _on_enviar_pressed() -> void:
+	sfx.stream = preload("res://Assets/SFX/Select.wav")
+	sfx.play()
 	if ocor_node == null: return
 	# ENVIA DADOS PARA SEREM ANALISADOS
 	ocor_node.resolve(ocor_selection)
@@ -198,7 +204,7 @@ func tempo_recarga(id):
 	var gerador_timer = Timer.new()
 	add_child(gerador_timer)
 	gerador_timer.one_shot = true
-	gerador_timer.wait_time = 10.0
+	gerador_timer.wait_time = 20.0
 	gerador_timer.timeout.connect(_on_timer_timeout.bind(gerador_timer, id))
 	gerador_timer.start()
 

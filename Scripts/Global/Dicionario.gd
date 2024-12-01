@@ -3,7 +3,8 @@ extends Node
 var id_count = 0 # CONTADOR PARA SETAR ID DE OCORRÊNCIAS
 var peso_estagio = 0 # PESO TOTAL PARA CÁLCULO DO ESTÁGIO DA CIDADE
 var soma_tempo_react = 0 # SOMA DO TEMPO LEVADO PARA SOLUCIONAR CADA OCORRÊNCIA
-var num_ocor = 0 # NÚMERO DE OCORRÊNCIAS SOLUCIONADAS
+var num_ocor := 0 # NÚMERO DE OCORRÊNCIAS SOLUCIONADAS
+var win = false
 
 const desastres = { # DADOS DE DESASTRES
 	0: {
@@ -130,7 +131,7 @@ const desastres = { # DADOS DE DESASTRES
 		"desc": "Seca em regiões e grande onda de mormaço",
 		"peso": "3",
 		"orgaos": ["alerta_rio", "conservacao"],
-		"img" : "acidente"
+		"img" : "seca"
 	},
 	18: {
 		"nome": "Queda de luz Baixa",
@@ -158,7 +159,7 @@ const desastres = { # DADOS DE DESASTRES
 		"desc": "Falta d'água em região residencial",
 		"peso": "2",
 		"orgaos": ["rioaguas", "conservacao"],
-		"img" : "acidente"
+		"img" : "seca"
 	},
 	22: {
 		"nome": "Interditamento de passagem de esgoto",
@@ -179,7 +180,7 @@ const desastres = { # DADOS DE DESASTRES
 		"desc": "Formação de cratera em via pública",
 		"peso": "2",
 		"orgaos": ["conservacao", "cet_rio"],
-		"img" : "acidente"
+		"img" : "buraco"
 	},
 	25: {
 		"nome": "Derramamento de óleo",
@@ -214,7 +215,7 @@ const desastres = { # DADOS DE DESASTRES
 		"desc": "Manifestação interrompendo o tráfego",
 		"peso": "2",
 		"orgaos": ["pm", "cet_rio"],
-		"img" : "acidente"
+		"img" : "protesto"
 	},
 	30: {
 		"nome": "Incêndio florestal",
@@ -256,7 +257,7 @@ const desastres = { # DADOS DE DESASTRES
 		"desc": "Estruturas colapsaram em área de construção, grande chance de pessoas nos escombros",
 		"peso": "4",
 		"orgaos": ["geo_rio", "bombeiro"],
-		"img" : "acidente"
+		"img" : "desabamento_obra"
 	}
 }
 

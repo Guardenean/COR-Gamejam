@@ -25,25 +25,25 @@ func _equilibrador() -> float:
 	else:  # 30% de chance de estar entre 50% e 100%
 		return randf_range(max_value / 2, max_value)
 
-func _mede_calor(valueC: float):
+func _mede_valor(valor: float):
 	# Atualiza o calor atual
-	calor_atual = valueC
-	
-	#if valueC >= 90:
-		#print("O Mundo está em chamas: 40°")
-	#elif valueC >= 70:
-		#print("Onda forte de calor: 28°")
-	#elif valueC >= 50:
-		#print("Está Calor: 25°")
-	#elif valueC >= 30:
-		#print("Calor: 20°")
-	#else:
-		#print("Frio: abaixo dos 18°")
+	if valor >= 90:
+		return 4
+	elif valor >= 70:
+		return 3
+	elif valor >= 50:
+		return 2
+	elif valor >= 30:
+		return 1
+	else:
+		return 0
 
 
 func _on_timer_timeout():
-	calor_atual = _equilibrador()
-	calor_bar.value = calor_atual
+	var calor = _equilibrador()
+	calor_bar.value = calor
+	calor_atual = _mede_valor(calor)
 	
-	chuva_atual = _equilibrador()
-	chuva_bar.value = chuva_atual
+	var chuva = _equilibrador()
+	chuva_bar.value = chuva
+	chuva_atual = _mede_valor(chuva)

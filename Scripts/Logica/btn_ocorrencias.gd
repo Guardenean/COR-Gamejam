@@ -51,7 +51,10 @@ func _on_pressed() -> void:
 	
 	# REGISTRA COMO SELECIONADO
 	principal.ocor_node = self
-	print(name)
+	
+	# TOCA SFX
+	principal.sfx.stream = preload("res://Assets/SFX/Select.wav")
+	principal.sfx.play()
 
 func resolve(orgaos : Array) -> void:
 	timer.start() # INICIA O TIMER
@@ -72,6 +75,8 @@ func resolve(orgaos : Array) -> void:
 			Desastres.num_ocor += 1
 			Desastres.soma_tempo_react += 0
 			principal.ocor_node = null
+			#principal.sfx.stream = preload("res://Assets/SFX/Fail.wav")
+			#principal.sfx.play()
 			queue_free()
 			
 	# SENÃO, FRACASSO E AUMENTA PESO DE ESTÁGIO
@@ -79,7 +84,11 @@ func resolve(orgaos : Array) -> void:
 			print("Falhou...")
 			Desastres.peso_estagio += 1
 			print(Desastres.peso_estagio)
+			principal.sfx.stream = preload("res://Assets/SFX/Fail.wav")
+			principal.sfx.play()
 	else:
 		print("Falhou...")
 		Desastres.peso_estagio += 1
 		print(Desastres.peso_estagio)
+		principal.sfx.stream = preload("res://Assets/SFX/Fail.wav")
+		principal.sfx.play()
