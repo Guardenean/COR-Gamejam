@@ -6,7 +6,7 @@ var peso_estagio = 0 # PESO TOTAL PARA CÁLCULO DO ESTÁGIO DA CIDADE
 const desastres = { # DADOS DE DESASTRES
 	0: {
 		"nome": "Acidente",
-		"desc": "Carros se chocaram", 
+		"desc": "Carros se chocaram, pessoas feridas no local, possível congestionamento", 
 		"peso": "1",
 		"orgaos": ["pm", "samu", "cet_rio"],
 		"img" : "acidente"
@@ -20,28 +20,28 @@ const desastres = { # DADOS DE DESASTRES
 	},
 	2: {
 		"nome": "Chuva Moderada",
-		"desc": "Chuva ultrapassou os 20mm/h",
+		"desc": "Chuva ultrapassou os 20mm/h, possíveis alagamentos",
 		"peso": "2",
 		"orgaos": ["alerta_rio", "conservacao", "rioaguas"],
 		"img" : "acidente"
 	},
 	3: {
 		"nome": "Chuva Forte",
-		"desc": "Chuva ultrapassou os 30mm/h",
+		"desc": "Chuva ultrapassou os 30mm/h, grandes áreas de deslizamento",
 		"peso": "3",
 		"orgaos": ["alerta_rio", "geo_rio", "conservacao"],
 		"img" : "acidente"
 	},
 	4: {
 		"nome": "Evento",
-		"desc": "Final do Jogo de futebol",
+		"desc": "Final do Jogo de futebol, grande chance de confronto de torcidas",
 		"peso": "2",
 		"orgaos": ["cet_rio", "pm"],
 		"img" : "acidente"
 	},
 	5: {
 		"nome": "Grande Evento",
-		"desc": "Show de artista vindo de fora",
+		"desc": "Show de artista vindo de fora, possíveis assaltos na área ao redor",
 		"peso": "4",
 		"orgaos": ["cet_rio", "pm", "conservacao"],
 		"img" : "acidente"
@@ -55,7 +55,7 @@ const desastres = { # DADOS DE DESASTRES
 	},
 	7: {
 		"nome": "Queda de árvore em uma moradia",
-		"desc": "Árvore em queda de fios de eletricidade",
+		"desc": "Árvore em queda de fios de eletricidade, possível incêndio de árvore e gerador",
 		"peso": "2",
 		"orgaos": ["conservacao", "bombeiro", "rioluz"],
 		"img" : "acidente"
@@ -69,21 +69,21 @@ const desastres = { # DADOS DE DESASTRES
 	},
 	9: {
 		"nome": "Colapso de Prédio",
-		"desc": "Prédio desabou",
+		"desc": "Prédio desabou, grande chance de vítimas, pessoas descontroladas",
 		"peso": "4",
 		"orgaos": ["bombeiro", "geo_rio", "pm"],
 		"img" : "acidente"
 	},
 	10: {
 		"nome": "Deslizamento de Terra",
-		"desc": "Terra gerou escombros arrastando área",
+		"desc": "Terra gerou escombros arrastando área, grande chance de pessoas soterradas",
 		"peso": "3",
 		"orgaos": ["bombeiro", "geo_rio", "alerta_rio"],
 		"img" : "acidente"
 	},
 	11: {
 		"nome": "Incêndio Urbano",
-		"desc": "Fogo se alastrando sobre prédio",
+		"desc": "Fogo se alastrando sobre prédio, grande chance de pessoas presas no prédio, pessoas descontroladas",
 		"peso": "4",
 		"orgaos": ["bombeiro", "pm", "conservacao"],
 		"img" : "acidente"
@@ -97,14 +97,14 @@ const desastres = { # DADOS DE DESASTRES
 	},
 	13: {
 		"nome": "Falha de transporte público",
-		"desc": "Ônibus com falha ao meio da pista",
+		"desc": "Ônibus com falha ao meio da pista, revolta de passageiros agressivos",
 		"peso": "3",
 		"orgaos": ["cet_rio", "pm"],
 		"img" : "acidente"
 	},
 	14: {
 		"nome": "Queda de árvore em veículo",
-		"desc": "Queda em carro de família, chance de haver feridos",
+		"desc": "Queda em carro de família, chance de haver feridos e fatalidades",
 		"peso": "3",
 		"orgaos": ["bombeiro", "conservacao", "samu"],
 		"img" : "acidente"
@@ -139,7 +139,7 @@ const desastres = { # DADOS DE DESASTRES
 	},
 	19: {
 		"nome": "Queda de luz Moderada",
-		"desc": "Região de sinais sem energia",
+		"desc": "Região de sinais sem energia, grande chance de trânsito congestionado",
 		"peso": "2",
 		"orgaos": ["rioluz", "cet_rio"],
 		"img" : "acidente"
@@ -223,14 +223,14 @@ const desastres = { # DADOS DE DESASTRES
 	},
 	31: {
 		"nome": "Desmoronamento de ponte",
-		"desc": "Estrutura de ponte colapsou",
+		"desc": "Estrutura de ponte colapsou, grande chance de presos nos escombros",
 		"peso": "5",
 		"orgaos": ["bombeiro", "cet_rio", "geo_rio"],
 		"img" : "acidente"
 	},
 	32: {
 		"nome": "Vazamento químico",
-		"desc": "Substância perigosa vazando em área industrial",
+		"desc": "Substância perigosa vazando em área industrial, ferídos no local e tumulto",
 		"peso": "5",
 		"orgaos": ["bombeiro", "pm", "conservacao"],
 		"img" : "acidente"
@@ -251,7 +251,7 @@ const desastres = { # DADOS DE DESASTRES
 	},
 	35: {
 		"nome": "Desabamento em obra",
-		"desc": "Estruturas colapsaram em área de construção",
+		"desc": "Estruturas colapsaram em área de construção, grande chance de pessoas nos escombros",
 		"peso": "4",
 		"orgaos": ["geo_rio", "bombeiro"],
 		"img" : "acidente"
