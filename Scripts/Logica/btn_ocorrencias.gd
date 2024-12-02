@@ -10,6 +10,7 @@ var tempo_react = 0
 @onready var label = $Label
 @onready var bar = $ProgressBar
 @onready var timer = $Timer
+@onready var sfx = $SFX
 
 func _ready() -> void:
 	# SETA O ID
@@ -53,12 +54,15 @@ func _on_pressed() -> void:
 	principal.ocor_node = self
 	
 	# TOCA SFX
-	principal.sfx.stream = preload("res://Assets/SFX/Select.wav")
-	principal.sfx.play()
+	sfx.stream = preload("res://Assets/SFX/Select.wav")
+	sfx.play()
 
 func resolve(orgaos : Array) -> void:
+	sfx.stream = preload("res://Assets/SFX/Analisando.MP3")
+	sfx.play()
 	timer.start() # INICIA O TIMER
 	await timer.timeout # ESPERA TIMER TERMINAR
+	sfx.stop()
 	
 	# CHECA SE O NÚMERO DE ÓRGAOS É CERTO
 	if orgaos.size() == desaster.orgaos.size():
@@ -73,10 +77,10 @@ func resolve(orgaos : Array) -> void:
 			print("Sucesso!")
 			Desastres.peso_estagio -= peso
 			Desastres.num_ocor += 1
-			Desastres.soma_tempo_react += 0
+			#Desastres.soma_tempo_react += 0
 			principal.ocor_node = null
-			#principal.sfx.stream = preload("res://Assets/SFX/Fail.wav")
-			#principal.sfx.play()
+			sfx.stream = preload("res://Assets/SFX/Success.wav")
+			sfx.play()
 			queue_free()
 			
 	# SENÃO, FRACASSO E AUMENTA PESO DE ESTÁGIO
@@ -84,11 +88,11 @@ func resolve(orgaos : Array) -> void:
 			print("Falhou...")
 			Desastres.peso_estagio += 1
 			print(Desastres.peso_estagio)
-			principal.sfx.stream = preload("res://Assets/SFX/Fail.wav")
-			principal.sfx.play()
+			sfx.stream = preload("res://Assets/SFX/Fail.wav")
+			sfx.play()
 	else:
 		print("Falhou...")
 		Desastres.peso_estagio += 1
 		print(Desastres.peso_estagio)
-		principal.sfx.stream = preload("res://Assets/SFX/Fail.wav")
-		principal.sfx.play()
+		sfx.stream = preload("res://Assets/SFX/Fail.wav")
+		sfx.play()

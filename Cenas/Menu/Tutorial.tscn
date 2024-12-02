@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://wb3vqsdryar2"]
+[gd_scene load_steps=15 format=3 uid="uid://wb3vqsdryar2"]
 
 [ext_resource type="Script" path="res://Scripts/Menu/Tutorial.gd" id="1_dakqn"]
 [ext_resource type="Texture2D" uid="uid://bwen7vpkv34dp" path="res://Assets/SpritesPrincipais/Icones/AlertaRio.png" id="2_ymu2l"]
@@ -13,6 +13,13 @@
 [ext_resource type="Texture2D" uid="uid://cnh4g075uy4h8" path="res://Assets/SpritesPrincipais/Icones/GeoRio.png" id="11_8gvjh"]
 [ext_resource type="Texture2D" uid="uid://cc62vfc4nfno5" path="res://Assets/SpritesPrincipais/Icones/RioAguas.png" id="12_7k8qk"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_52igy"]
+font_size = 120
+font_color = Color(0.220227, 0.423815, 0.659656, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gdtoa"]
+font_size = 64
+
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -23,6 +30,7 @@ grow_vertical = 2
 script = ExtResource("1_dakqn")
 
 [node name="Aprentação Jogo" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -48,36 +56,35 @@ text = "PRÓXIMO"
 
 [node name="Titulo" type="Label" parent="Aprentação Jogo"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.499
-anchor_top = 0.137
-anchor_right = 0.499
-anchor_bottom = 0.137
-offset_left = -439.592
-offset_top = -47.96
-offset_right = 437.408
-offset_bottom = 48.04
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -830.5
+offset_right = 830.5
+offset_bottom = 175.0
 grow_horizontal = 2
-grow_vertical = 2
 theme_override_font_sizes/font_size = 70
-text = "COMO FUNCIONA O JOGO"
+text = "COMO FUNCIONA O JOGO?"
+label_settings = SubResource("LabelSettings_52igy")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Descrição" type="Label" parent="Aprentação Jogo"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.526
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 0.526
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -675.608
-offset_top = -306.0
-offset_right = 676.392
-offset_bottom = 316.0
+offset_left = -1095.5
+offset_top = -110.0
+offset_right = 1095.5
+offset_bottom = 187.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 40
-text = "Você terá que gerenciar as equipes dos ogãos em questão para evitar/
-amenizar as ocorrencias de crise. "
+text = "Você terá que gerenciar as equipes dos orgãos em questão para evitar/
+amenizar as ocorrências de crise. "
+label_settings = SubResource("LabelSettings_gdtoa")
 
 [node name="Button" type="Button" parent="Aprentação Jogo"]
 layout_mode = 1
@@ -94,7 +101,6 @@ theme_override_font_sizes/font_size = 24
 text = "X"
 
 [node name="Orgãos Jogo" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -105,9 +111,9 @@ grow_vertical = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="Orgãos Jogo"]
 layout_mode = 0
 offset_left = 1879.0
-offset_top = 534.0
+offset_top = 616.0
 offset_right = 1919.0
-offset_bottom = 574.0
+offset_bottom = 656.0
 
 [node name="AlertaRio" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer"]
 position = Vector2(-1647, -324)
@@ -165,8 +171,9 @@ Combater Incêndios e resgate de pessoas "
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Orgãos Jogo"]
 layout_mode = 0
+offset_top = 82.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 122.0
 
 [node name="Comlurb" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer2"]
 position = Vector2(1103, 242)
@@ -227,9 +234,9 @@ metadata/_edit_use_anchors_ = true
 [node name="HBoxContainer3" type="HBoxContainer" parent="Orgãos Jogo"]
 layout_mode = 0
 offset_left = 1881.0
-offset_top = 222.0
+offset_top = 304.0
 offset_right = 1921.0
-offset_bottom = 262.0
+offset_bottom = 344.0
 
 [node name="PoliciaMilitar" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer3"]
 position = Vector2(4, 38)
@@ -288,9 +295,9 @@ metadata/_edit_use_anchors_ = true
 [node name="HBoxContainer4" type="HBoxContainer" parent="Orgãos Jogo"]
 layout_mode = 0
 offset_left = 1961.0
-offset_top = 510.0
+offset_top = 592.0
 offset_right = 2001.0
-offset_bottom = 550.0
+offset_bottom = 632.0
 
 [node name="GeoRio" type="Sprite2D" parent="Orgãos Jogo/HBoxContainer4"]
 position = Vector2(-1332, 173)
@@ -360,21 +367,21 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 text = "PRÓXIMO"
 
-[node name="Label" type="Label" parent="Orgãos Jogo"]
+[node name="Titulo" type="Label" parent="Orgãos Jogo"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.227
-anchor_top = 0.026
-anchor_right = 0.767
-anchor_bottom = 0.115
-offset_left = 0.383972
-offset_top = -0.0799999
-offset_right = 1.06396
-offset_bottom = -0.200005
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1115.0
+offset_top = 48.0
+offset_right = 1115.0
+offset_bottom = 223.0
 grow_horizontal = 2
-grow_vertical = 2
 theme_override_font_sizes/font_size = 70
 text = "OS ORGÃOS QUE VOCÊ IRÁ GERENCIAR"
+label_settings = SubResource("LabelSettings_52igy")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Mecânica Jogo" type="Panel" parent="."]
 visible = false

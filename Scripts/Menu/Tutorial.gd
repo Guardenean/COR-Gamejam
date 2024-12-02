@@ -1,5 +1,6 @@
 extends Control
 
+@onready var sfx = $sfx
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,23 +9,25 @@ func _ready() -> void:
 	$"Mecânica Jogo".visible = false
 
 func _on_prox_1_pressed() -> void:
+	sfx.play()
 	$"Aprentação Jogo".visible = false
 	$"Orgãos Jogo".visible = true
 	$"Mecânica Jogo".visible = false
 
-
 func _on_ant_1_pressed() -> void:
+	sfx.play()
 	$"Aprentação Jogo".visible = true
 	$"Orgãos Jogo".visible = false
 	$"Mecânica Jogo".visible = false
 
-
 func _on_prox_2_pressed() -> void:
+	sfx.play()
 	$"Aprentação Jogo".visible = false
 	$"Orgãos Jogo".visible = false
 	$"Mecânica Jogo".visible = true
 
 func _on_ant_2_pressed() -> void:
+	sfx.play()
 	$"Aprentação Jogo".visible = false
 	$"Orgãos Jogo".visible = true
 	$"Mecânica Jogo".visible = false

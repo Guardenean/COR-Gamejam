@@ -2,7 +2,7 @@ extends Node
 
 var id_count = 0 # CONTADOR PARA SETAR ID DE OCORRÊNCIAS
 var peso_estagio = 0 # PESO TOTAL PARA CÁLCULO DO ESTÁGIO DA CIDADE
-var soma_tempo_react = 0 # SOMA DO TEMPO LEVADO PARA SOLUCIONAR CADA OCORRÊNCIA
+#var soma_tempo_react = 0 # SOMA DO TEMPO LEVADO PARA SOLUCIONAR CADA OCORRÊNCIA
 var num_ocor := 0 # NÚMERO DE OCORRÊNCIAS SOLUCIONADAS
 var win = false
 
@@ -68,21 +68,21 @@ const desastres = { # DADOS DE DESASTRES
 		"desc": "Altos índices no marégrafo",
 		"peso": "2",
 		"orgaos": ["alerta_rio", "geo_rio"],
-		"img" : "acidente"
+		"img" : "chuva"
 	},
 	9: {
 		"nome": "Colapso de Prédio",
 		"desc": "Prédio desabou, grande chance de vítimas, pessoas descontroladas",
 		"peso": "4",
 		"orgaos": ["bombeiro", "geo_rio", "pm"],
-		"img" : "acidente"
+		"img" : "desabamento_obra"
 	},
 	10: {
 		"nome": "Deslizamento de Terra",
 		"desc": "Terra gerou escombros arrastando área, grande chance de pessoas soterradas",
 		"peso": "3",
 		"orgaos": ["bombeiro", "geo_rio", "alerta_rio"],
-		"img" : "acidente"
+		"img" : "desabamento_obra"
 	},
 	11: {
 		"nome": "Incêndio Urbano",
@@ -96,7 +96,7 @@ const desastres = { # DADOS DE DESASTRES
 		"desc": "Cano explodiu, jogando água na rua",
 		"peso": "2",
 		"orgaos": ["rioaguas", "conservacao"],
-		"img" : "acidente"
+		"img" : "desabamento_obra"
 	},
 	13: {
 		"nome": "Falha de transporte público",
@@ -117,14 +117,14 @@ const desastres = { # DADOS DE DESASTRES
 		"desc": "Acúmulo de moscas na região",
 		"peso": "1",
 		"orgaos": ["comlurb"],
-		"img" : "acidente"
+		"img" : "desabamento_obra"
 	},
 	16: {
 		"nome": "Lixo Acumulado Grave",
 		"desc": "Acúmulo de mosquitos em grande escala",
 		"peso": "3",
 		"orgaos": ["comlurb", "conservacao"],
-		"img" : "acidente"
+		"img" : "desabamento_obra"
 	},
 	17: {
 		"nome": "Onda de calor intensa",
@@ -138,21 +138,21 @@ const desastres = { # DADOS DE DESASTRES
 		"desc": "Região residencial sem energia",
 		"peso": "1",
 		"orgaos": ["rioluz"],
-		"img" : "acidente"
+		"img" : "seca"
 	},
 	19: {
 		"nome": "Queda de luz Moderada",
 		"desc": "Região de sinais sem energia, grande chance de trânsito congestionado",
 		"peso": "2",
 		"orgaos": ["rioluz", "cet_rio"],
-		"img" : "acidente"
+		"img" : "seca"
 	},
 	20: {
 		"nome": "Queda de luz Grave",
 		"desc": "Região de hospitais sem energia",
 		"peso": "4",
 		"orgaos": ["rioluz", "pm", "samu"],
-		"img" : "acidente"
+		"img" : "seca"
 	},
 	21: {
 		"nome": "Seca em área residencial",
@@ -166,14 +166,14 @@ const desastres = { # DADOS DE DESASTRES
 		"desc": "Acúmulo de sujeira nas tubulações",
 		"peso": "3",
 		"orgaos": ["rioaguas", "conservacao"],
-		"img" : "acidente"
+		"img" : "desabamento_obra"
 	},
 	23: {
 		"nome": "Enchente Urbana",
 		"desc": "Áreas urbanas inundadas por excesso de chuva",
 		"peso": "4",
 		"orgaos": ["rioaguas", "geo_rio", "alerta_rio", "conservacao"],
-		"img" : "acidente"
+		"img" : "chuva"
 	},
 	24: {
 		"nome": "Buraco na pista",
@@ -187,28 +187,28 @@ const desastres = { # DADOS DE DESASTRES
 		"desc": "Acidente causando óleo em vias públicas",
 		"peso": "3",
 		"orgaos": ["cet_rio", "conservacao"],
-		"img" : "acidente"
+		"img" : "oleo"
 	},
 	26: {
 		"nome": "Desabamento de muro",
 		"desc": "Muro de contenção desabou",
 		"peso": "3",
 		"orgaos": ["geo_rio", "conservacao", "bombeiro"],
-		"img" : "acidente"
+		"img" : "muro"
 	},
 	27: {
 		"nome": "Ameaça de bomba",
 		"desc": "Suspeita de dispositivo explosivo em área urbana",
 		"peso": "5",
 		"orgaos": ["pm", "bombeiro"],
-		"img" : "acidente"
+		"img" : "desabamento_obra"
 	},
 	28: {
 		"nome": "Rompimento de barragem",
 		"desc": "Barragem se rompeu, liberando grande volume de água",
 		"peso": "5",
 		"orgaos": ["geo_rio", "rioaguas", "bombeiro", "pm"],
-		"img" : "acidente"
+		"img" : "desabamento_obra"
 	},
 	29: {
 		"nome": "Protesto em vias públicas",
@@ -222,35 +222,35 @@ const desastres = { # DADOS DE DESASTRES
 		"desc": "Fogo alastrando em área de mata",
 		"peso": "4",
 		"orgaos": ["bombeiro", "alerta_rio"],
-		"img" : "acidente"
+		"img" : "incendio"
 	},
 	31: {
 		"nome": "Desmoronamento de ponte",
 		"desc": "Estrutura de ponte colapsou, grande chance de presos nos escombros",
 		"peso": "5",
 		"orgaos": ["bombeiro", "cet_rio", "geo_rio"],
-		"img" : "acidente"
+		"img" : "trem"
 	},
 	32: {
 		"nome": "Vazamento químico",
 		"desc": "Substância perigosa vazando em área industrial, ferídos no local e tumulto",
 		"peso": "5",
 		"orgaos": ["bombeiro", "pm", "conservacao"],
-		"img" : "acidente"
+		"img" : "desabamento_obra"
 	},
 	33: {
 		"nome": "Ataque de animais selvagens",
 		"desc": "Animais silvestres em área urbana causando perigo. 4 feridos no local, com risco de aumento no número de vítimas",
 		"peso": "3",
 		"orgaos": ["pm", "conservacao", "samu"],
-		"img" : "acidente"
+		"img" : "arvore"
 	},
 	34: {
 		"nome": "Colisão ferroviária",
 		"desc": "Trens colidiram, causando danos e possíveis vítimas",
 		"peso": "5",
 		"orgaos": ["cet_rio", "bombeiro", "samu"],
-		"img" : "acidente"
+		"img" : "trem"
 	},
 	35: {
 		"nome": "Desabamento em obra",

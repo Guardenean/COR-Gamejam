@@ -58,7 +58,7 @@ size_flags_vertical = 6
 script = ExtResource("1_tamjx")
 
 [node name="TempoJogo" type="Timer" parent="."]
-wait_time = 300.0
+wait_time = 60.0
 one_shot = true
 autostart = true
 
