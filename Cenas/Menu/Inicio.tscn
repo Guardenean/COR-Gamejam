@@ -2,10 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/Menu/inicio.gd" id="1_b1bkd"]
 [ext_resource type="Texture2D" uid="uid://dmxywrp1usmrg" path="res://Assets/SpritesPrincipais/Background.jpg" id="2_aet16"]
+[ext_resource type="Texture2D" uid="uid://b4aem0547jwsx" path="res://Assets/SpritesPrincipais/Logo.png" id="2_omduq"]
 [ext_resource type="AudioStream" uid="uid://crh0ph6ohwvh2" path="res://Assets/SFX/Select.wav" id="3_1d7hf"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_8mg3t"]
-font_size = 128
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -17,8 +15,17 @@ grow_vertical = 2
 size_flags_horizontal = 3
 script = ExtResource("1_b1bkd")
 
-[node name="Fundo" type="TextureRect" parent="."]
-self_modulate = Color(1, 0.636896, 0.676453, 1)
+[node name="Fundo" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.255994, 0.661647, 0.875794, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Fundo"]
+self_modulate = Color(1, 1, 1, 0.2)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,24 +35,6 @@ grow_vertical = 2
 texture = ExtResource("2_aet16")
 expand_mode = 1
 
-[node name="Titulo" type="Label" parent="Fundo"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -404.5
-offset_top = -345.0
-offset_right = 404.5
-offset_bottom = -170.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Rio no Limite"
-label_settings = SubResource("LabelSettings_8mg3t")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Botoes" type="VBoxContainer" parent="Fundo"]
 layout_mode = 1
 anchors_preset = 8
@@ -53,20 +42,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -285.0
-offset_top = -99.0
-offset_right = 285.0
-offset_bottom = 321.0
+offset_left = 286.0
+offset_top = -210.0
+offset_right = 856.0
+offset_bottom = 210.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 30
+theme_override_constants/separation = 80
 alignment = 1
-
-[node name="Jogar" type="Button" parent="Fundo/Botoes"]
-custom_minimum_size = Vector2(0, 120)
-layout_mode = 2
-theme_override_font_sizes/font_size = 52
-text = "Jogar"
 
 [node name="Tutorial" type="Button" parent="Fundo/Botoes"]
 custom_minimum_size = Vector2(0, 120)
@@ -74,11 +57,33 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 52
 text = "Tutorial"
 
+[node name="Jogar" type="Button" parent="Fundo/Botoes"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_font_sizes/font_size = 52
+text = "Jogar"
+
 [node name="Sair" type="Button" parent="Fundo/Botoes"]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 theme_override_font_sizes/font_size = 52
 text = "Sair"
+
+[node name="Logo" type="TextureRect" parent="Fundo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -968.0
+offset_top = -297.0
+offset_right = 59.0
+offset_bottom = 297.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_omduq")
+expand_mode = 1
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_1d7hf")
@@ -86,6 +91,6 @@ stream = ExtResource("3_1d7hf")
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
-[connection signal="pressed" from="Fundo/Botoes/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="Fundo/Botoes/Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="Fundo/Botoes/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="Fundo/Botoes/Sair" to="." method="_on_sair_pressed"]

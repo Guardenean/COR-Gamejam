@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bo1lqd22ai3kg"]
+[gd_scene load_steps=33 format=3 uid="uid://bo1lqd22ai3kg"]
 
 [ext_resource type="Texture2D" uid="uid://dmxywrp1usmrg" path="res://Assets/SpritesPrincipais/Background.jpg" id="1_f22hs"]
 [ext_resource type="Script" path="res://Scripts/Logica/GameController.gd" id="1_tamjx"]
@@ -24,6 +24,7 @@
 [ext_resource type="Script" path="res://Scripts/Logica/estagio.gd" id="22_86vf3"]
 [ext_resource type="Texture2D" uid="uid://cnipxe3hv3man" path="res://Assets/SpritesPrincipais/Relogio.png" id="23_3gnvd"]
 [ext_resource type="Script" path="res://Scripts/Logica/Relogio.gd" id="24_ewala"]
+[ext_resource type="AudioStream" uid="uid://c7mj80hhhti6l" path="res://Assets/SFX/Bgm.mp3" id="25_ug42m"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fhghj"]
 font_size = 20
@@ -58,7 +59,7 @@ size_flags_vertical = 6
 script = ExtResource("1_tamjx")
 
 [node name="TempoJogo" type="Timer" parent="."]
-wait_time = 60.0
+wait_time = 300.0
 one_shot = true
 autostart = true
 
@@ -585,6 +586,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("25_ug42m")
+autoplay = true
+parameters/looping = false
 
 [connection signal="timeout" from="TempoJogo" to="Indicadores/Estagio" method="_on_tempo_jogo_timeout"]
 [connection signal="pressed" from="Recursos/Orgaos/GridContainer/DefesaCivil" to="." method="_on_defesa_civil_pressed"]
