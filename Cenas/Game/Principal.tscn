@@ -590,7 +590,7 @@ vertical_alignment = 1
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("25_ug42m")
 autoplay = true
-parameters/looping = false
+parameters/looping = true
 
 [connection signal="timeout" from="TempoJogo" to="Indicadores/Estagio" method="_on_tempo_jogo_timeout"]
 [connection signal="pressed" from="Recursos/Orgaos/GridContainer/DefesaCivil" to="." method="_on_defesa_civil_pressed"]
